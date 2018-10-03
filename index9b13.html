@@ -1,0 +1,549 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from edebiyat.istanbul.edu.tr/felsefe/?p=6612 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 22 Mar 2018 12:30:24 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" >
+        <!--[if IE 9]>
+        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" >
+        <![endif]-->
+        <!--[if IE 8]>
+        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" >
+        <![endif]-->
+        <!--[if IE 7]>
+        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" >
+        <![endif]-->
+<meta NAME="keywords" CONTENT="İstanbul Üniversitesi, Istanbul University, Eğitim, Education, Akademik, Academy, İstanbul, Istanbul, University, Üniversite, Student, Öğrenci, Turkey">
+<meta NAME="description" CONTENT="İstanbul Üniversitesi | Tarihten Geleceğe Bilim Köprüsü - 1453">
+<meta NAME="author" CONTENT="İstanbul Üniversitesi Bilgi İşlem Daire Başkanlığı">
+<meta name="google-site-verification" content="KIn8WeplSWedUUx5vVZiVnhacrOHkCLWuQPvp0Ags_I" />
+<META NAME="googlebot" CONTENT="index, follow">
+<META NAME="robots" CONTENT="index, follow">
+<meta name="robots" content="all">
+<meta name="revisit-after" content="1 Days">
+<title>Doktora Yeterlilik Kriterleri | İstanbul Üniversitesi Edebiyat Fakültesi</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="stylesheet" type="text/css" media="all" href="wp-content/themes/1453/style.css" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+<script type="text/javascript" src="highlight.js"></script>
+<script src="http://edebiyat.istanbul.edu.tr/wp-content/plugins/wp-spry-menu/SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
+<script type="text/javascript" src="jquery.scrollTo.js"></script>
+<script src="jcarousellite_1.0.1c4_new.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function() {
+	$(".duyuru-wrapper").jCarouselLite({
+		horizontal: true,
+		hoverPause: true,
+		btnPrev: ".back",
+		btnNext: ".next",
+		visible: 1,
+		auto:10000,
+		speed:500
+	});
+});
+</script>
+<script>
+
+$(document).ready(function() {
+
+	//Speed of the slideshow
+	var speed = 5000;
+	
+	//You have to specify width and height in #slider CSS properties
+	//After that, the following script will set the width and height accordingly
+	$('#mask-gallery, #gallery li').width($('#slider').width());	
+	$('#gallery').width($('#slider').width() * $('#gallery li').length);
+	$('#mask-gallery, #gallery li, #mask-excerpt, #excerpt li').height($('#slider').height());
+	
+	//Assign a timer, so it will run periodically
+	var run = setInterval('newsscoller(0)', speed);	
+	
+	$('#gallery li:first, #excerpt li:first').addClass('selected');
+
+	//Pause the slidershow with clearInterval
+	$('#btn-pause').click(function () {
+		clearInterval(run);
+		return false;
+	});
+
+	//Continue the slideshow with setInterval
+	$('#btn-play').click(function () {
+		run = setInterval('newsscoller(0)', speed);	
+		return false;
+	});
+	
+	//Next Slide by calling the function
+	$('#btn-next').click(function () {
+		newsscoller(0);	
+		return false;
+	});	
+
+	//Previous slide by passing prev=1
+	$('#btn-prev').click(function () {
+		newsscoller(1);	
+		return false;
+	});	
+	
+	//Mouse over, pause it, on mouse out, resume the slider show
+	$('#slider').hover(
+	
+		function() {
+			clearInterval(run);
+		}, 
+		function() {
+			run = setInterval('newsscoller(0)', speed);	
+		}
+	); 	
+	
+});
+
+
+function newsscoller(prev) {
+
+	//Get the current selected item (with selected class), if none was found, get the first item
+	var current_image = $('#gallery li.selected').length ? $('#gallery li.selected') : $('#gallery li:first');
+	var current_excerpt = $('#excerpt li.selected').length ? $('#excerpt li.selected') : $('#excerpt li:first');
+
+	//if prev is set to 1 (previous item)
+	if (prev) {
+		
+		//Get previous sibling
+		var next_image = (current_image.prev().length) ? current_image.prev() : $('#gallery li:last');
+		var next_excerpt = (current_excerpt.prev().length) ? current_excerpt.prev() : $('#excerpt li:last');
+	
+	//if prev is set to 0 (next item)
+	} else {
+		
+		//Get next sibling
+		var next_image = (current_image.next().length) ? current_image.next() : $('#gallery li:first');
+		var next_excerpt = (current_excerpt.next().length) ? current_excerpt.next() : $('#excerpt li:first');
+	}
+
+	//clear the selected class
+	$('#excerpt li, #gallery li').removeClass('selected');
+	
+	//reassign the selected class to current items
+	next_image.addClass('selected');
+	next_excerpt.addClass('selected');
+
+	//Scroll the items
+	$('#mask-gallery').scrollTo(next_image, 800);		
+	$('#mask-excerpt').scrollTo(next_excerpt, 800);					
+	
+}
+
+
+
+</script>
+<script type="text/javascript">
+$(function() {
+$(".img-four ul li:last-child").addClass("son");
+});
+</script>
+
+<link rel="pingback" href="xmlrpc.php" />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link rel="alternate" type="application/rss+xml" title="İstanbul Üniversitesi Edebiyat Fakültesi &raquo; beslemesi" href="indexd784.html?feed=rss2" />
+<link rel="alternate" type="application/rss+xml" title="İstanbul Üniversitesi Edebiyat Fakültesi &raquo; yorum beslemesi" href="indexa6da.html?feed=comments-rss2" />
+<link rel="alternate" type="application/rss+xml" title="İstanbul Üniversitesi Edebiyat Fakültesi &raquo; Doktora Yeterlilik Kriterleri yorum beslemesi" href="indexdee7.html?feed=rss2&amp;p=6612" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/edebiyat.istanbul.edu.tr\/felsefe\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.8"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,56826,8203,55356,56819),0,0),c=j.toDataURL(),b===c&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55358,56794,8205,9794,65039),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55358,56794,8203,9794,65039),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<style type="text/css">
+	.wp-pagenavi{margin-left:auto !important; margin-right:auto; !important}
+	</style>
+  <link rel='stylesheet' id='slideshow-gallery-css'  href='wp-content/plugins/slideshow-gallery/css/gallery-css424c.css?1=1&amp;resizeimages=N&amp;width=964&amp;height=400&amp;border=0px+none&amp;background=%23FFFFFF&amp;infobackground=%23546e34&amp;infocolor=%23fff&amp;ver=1.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='gtranslate-style-css'  href='wp-content/plugins/gtranslate/gtranslate-style16ef15.css?ver=4.8' type='text/css' media='all' />
+<link rel='stylesheet' id='tablepress-default-css'  href='wp-content/plugins/tablepress/css/default.min4b1d.css?ver=1.8' type='text/css' media='all' />
+<link rel='stylesheet' id='easytabs-css'  href='wp-content/plugins/wordpress-tabs-slides/easytabs/css/easy-responsive-tabsb95e.css?ver=2.0.3' type='text/css' media='all' />
+<link rel='stylesheet' id='tabs-slides-css'  href='wp-content/plugins/wordpress-tabs-slides/style/greenb95e.css?ver=2.0.3' type='text/css' media='all' />
+<link rel='stylesheet' id='tabs-slides-hacks-css'  href='wp-content/plugins/wordpress-tabs-slides/hacksb95e.css?ver=2.0.3' type='text/css' media='all' />
+<link rel='stylesheet' id='lightboxStyle-css'  href='wp-content/plugins/lightbox-plus/css/framed/colorbox.mineed8.css?ver=2.7.2' type='text/css' media='screen' />
+<link rel='stylesheet' id='wp-pagenavi-style-css'  href='wp-content/plugins/wp-pagenavi-style/css/css3_yellow_glossy5152.css?ver=1.0' type='text/css' media='all' />
+<script type='text/javascript' src='wp-includes/js/jquery/jqueryb8ff.js?ver=1.12.4'></script>
+<script type='text/javascript' src='wp-includes/js/jquery/jquery-migrate.min330a.js?ver=1.4.1'></script>
+<script type='text/javascript' src='wp-content/plugins/slideshow-gallery/js/gallery5152.js?ver=1.0'></script>
+<script type='text/javascript' src='wp-content/plugins/rbl-navigator/js/rbl-navigator84e2.js?ver=1.00'></script>
+<script type='text/javascript' src='wp-content/plugins/gtranslate/jquery-translateef15.js?ver=4.8'></script>
+<script type='text/javascript' src='wp-content/plugins/wordpress-tabs-slides/ts/tabs_slidesb95e.js?ver=2.0.3'></script>
+<script type='text/javascript' src='wp-content/plugins/wordpress-tabs-slides/ts/tabs_slides_opt_loaderb95e.js?ver=2.0.3'></script>
+<script type='text/javascript' src='wp-content/plugins/wordpress-tabs-slides/easytabs/js/easyResponsiveTabsb95e.js?ver=2.0.3'></script>
+<link rel='https://api.w.org/' href='index52f0.html?rest_route=/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Yeni Kayıtlar e-Devlet Üzerinden' href='indexc6b1.html?p=6621' />
+<link rel='next' title='İngilizce Hazırlık Başvuruları' href='indexa4f2.html?p=6615' />
+<meta name="generator" content="WordPress 4.8" />
+<link rel="canonical" href="index9b13.html?p=6612" />
+<link rel='shortlink' href='index9b13.html?p=6612' />
+<link rel="alternate" type="application/json+oembed" href="index3e1a.html?rest_route=%2Foembed%2F1.0%2Fembed&amp;url=http%3A%2F%2Fedebiyat.istanbul.edu.tr%2Ffelsefe%2F%3Fp%3D6612" />
+<link rel="alternate" type="text/xml+oembed" href="index9619.html?rest_route=%2Foembed%2F1.0%2Fembed&amp;url=http%3A%2F%2Fedebiyat.istanbul.edu.tr%2Ffelsefe%2F%3Fp%3D6612&amp;format=xml" />
+<!-- <meta name="NextGEN" version="2.1.50" /> -->
+<link rel="stylesheet" href="wp-content/plugins/rbl-navigator/css/rbl-navigator.css" type="text/css" media="screen, projection" />        
+        <script type="text/javascript">
+        var tb_pathToImage = "wp-includes/js/thickbox/loadingAnimation.gif";
+		var tb_closeImage = "wp-includes/js/thickbox/tb-close.html";
+		</script>
+        
+        	<style type="text/css">
+	 .wp-pagenavi
+	{
+		font-size:12px !important;
+	}
+	</style>
+	
+<link href="wp-content/plugins/wp-spry-menu/SpryAssets/global.css" type="text/css" rel="stylesheet" />
+
+<script src="wp-content/plugins/wp-spry-menu/SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
+<link href="wp-content/plugins/wp-spry-menu/themes/silver/style.css" type="text/css" rel="stylesheet" /><!-- Vipers Video Quicktags v6.6.0 | http://www.viper007bond.com/wordpress-plugins/vipers-video-quicktags/ -->
+<style type="text/css">
+.vvqbox { display: block; max-width: 100%; visibility: visible !important; margin: 10px auto; } .vvqbox img { max-width: 100%; height: 100%; } .vvqbox object { max-width: 100%; } 
+</style>
+<script type="text/javascript">
+// <![CDATA[
+	var vvqflashvars = {};
+	var vvqparams = { wmode: "opaque", allowfullscreen: "true", allowscriptaccess: "always" };
+	var vvqattributes = {};
+	var vvqexpressinstall = "wp-content/plugins/vipers-video-quicktags/resources/expressinstall.swf";
+// ]]>
+</script>
+	<style type="text/css">
+	.wp-pagenavi{margin-left:auto !important; margin-right:auto; !important}
+	</style>
+  </head>
+
+<body class="post-template-default single single-post postid-6612 single-format-standard">
+<div id="wrapper">
+<div class="header">
+<div id="topmenu">
+<div class="menu-topmenu-container"><ul id="wp_spry_menu" class="MenuBarHorizontal MenuBarActive"><li id="menu-item-5888" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-has-children menu-item-5888"><a href="http://edebiyat.istanbul.edu.tr/felsefe">Ana Sayfa</a>
+<ul  class="sub-menu">
+	<li id="menu-item-5889" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5889"><a href="http://www.istanbul.edu.tr/">İstanbul Üniversitesi Ana Sayfa</a></li>
+	<li id="menu-item-5890" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5890"><a href="http://edebiyat.istanbul.edu.tr/">Edebiyat Fakültesi Ana Sayfası</a></li>
+</ul>
+</li>
+<li id="menu-item-2433" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2433"><a href="#">Hakkımızda</a>
+<ul  class="sub-menu">
+	<li id="menu-item-6455" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6455"><a href="indexc781.html?p=6444">Bölüm Tarihçesi</a></li>
+	<li id="menu-item-7344" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7344"><a href="index8bab.html?p=7339">Bölüm Tanıtım Sunumu</a></li>
+</ul>
+</li>
+<li id="menu-item-6465" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-6465"><a href="#">Akademik</a>
+<ul  class="sub-menu">
+	<li id="menu-item-6553" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6553"><a href="http://aves.istanbul.edu.tr/abicak/">Bölüm Başkanı: Prof. Dr. Ayhan Bıçak</a></li>
+	<li id="menu-item-6466" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-6466"><a href="index6a2d.html?p=6462">Anabilim Dalları</a>
+	<ul  class="sub-menu">
+		<li id="menu-item-6476" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6476"><a href="index4860.html?p=6468">Felsefe Tarihi Anabilim Dalı</a></li>
+		<li id="menu-item-6477" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6477"><a href="index51f5.html?p=6470">Mantık Anabilim Dalı</a></li>
+		<li id="menu-item-6478" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6478"><a href="index1579.html?p=6472">Sistematik Felsefe Anabilim Dalı</a></li>
+		<li id="menu-item-6479" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6479"><a href="indexa36c.html?p=6474">Türk-İslam Düşüncesi Tarihi Anabilim Dalı</a></li>
+	</ul>
+</li>
+	<li id="menu-item-6484" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6484"><a href="index5388.html?p=6374">Akademik Kadro</a></li>
+</ul>
+</li>
+<li id="menu-item-6063" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-6063"><a href="#">Öğrenci</a>
+<ul  class="sub-menu">
+	<li id="menu-item-6964" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6964"><a href="index20d9.html?p=6436">Ders Programı</a></li>
+	<li id="menu-item-6458" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6458"><a href="http://ogrenci.istanbul.edu.tr/?cat=560">Akademik Takvim</a></li>
+	<li id="menu-item-6965" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-6965"><a href="index9b13.html?p=6612">Doktora Yeterlilik Kriterleri</a></li>
+	<li id="menu-item-5955" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5955"><a href="http://aksis.istanbul.edu.tr/">Öğrenci Otomasyon Sistemi</a></li>
+	<li id="menu-item-6221" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6221"><a href="http://eogren.istanbul.edu.tr/">E-Öğren (Ortak Dersler)</a></li>
+	<li id="menu-item-6201" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6201"><a href="http://erasmus.istanbul.edu.tr/">ERASMUS Programı</a></li>
+	<li id="menu-item-6457" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6457"><a href="http://erasmusprogram.istanbul.edu.tr/Students/uaikagreements.aspx">ERASMUS Anlaşma Sorgulama</a></li>
+	<li id="menu-item-6200" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6200"><a href="http://farabi.istanbul.edu.tr/">FARABİ Programı</a></li>
+	<li id="menu-item-6460" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6460"><a href="http://mevlana.istanbul.edu.tr/">MEVLANA Programı</a></li>
+	<li id="menu-item-6459" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6459"><a href="http://edebiyat.istanbul.edu.tr/?p=8200">Felsefe Topluluğu</a></li>
+</ul>
+</li>
+<li id="menu-item-6338" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-6338"><a href="#">Bilgi İşlem</a>
+<ul  class="sub-menu">
+	<li id="menu-item-6339" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6339"><a href="http://bilgiislem.istanbul.edu.tr/">Bilgi İşlem Daire Bşk.</a></li>
+	<li id="menu-item-6340" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6340"><a href="http://mail.istanbul.edu.tr/">Personel E-Posta</a></li>
+	<li id="menu-item-6341" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6341"><a href="http://ogr.iu.edu.tr/">Öğrenci E-Posta</a></li>
+	<li id="menu-item-6342" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6342"><a href="http://bilgiislem.istanbul.edu.tr/?p=282">Eduroam Kablosuz İnternet</a></li>
+</ul>
+</li>
+<li id="menu-item-5959" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5959"><a href="index1020.html?p=6554">İletişim</a></li>
+</ul></div><script type="text/javascript">
+<!--
+var wp_spry_menu = new Spry.Widget.MenuBar("wp_spry_menu");
+//-->
+</script>
+</div>
+<div class="clr"></div>
+
+<div class="logobar">
+<h1><a href="http://edebiyat.istanbul.edu.tr/felsefe">İstanbul Üniversitesi</a></h1>
+<div class="logobar-right">
+<div class="logo-menu"><div class="menu-logomenu-container"><ul id="logo-menu" class="logo-menu"><li id="menu-item-6204" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6204"><a href="#">Sıkça Sorulan Sorular</a></li>
+</ul></div></div>
+</div>
+<div class="clr"></div>
+</div>
+<div class="clr"></div>
+<div class="searchbar">
+<div class="sosyal">
+<a class="fb" href="https://www.facebook.com/iufelsefe" target="_blank"></a>
+<a class="twitter" href="https://twitter.com/iufelsefe" target="_blank"></a>
+<a class="youtube" href="https://www.youtube.com/channel/UCWc65LqYU2krXgugQFey7BA"></a>
+<a class="rss" href="indexd784.html?feed=rss2"></a>
+</div><div class="arama">
+<form method="get" id="searchform" action="http://edebiyat.istanbul.edu.tr/felsefe">
+<input type="text" onblur="if(this.value == '') { this.value='Arama'; }" onfocus="if(this.value == 'Arama') { this.value=''; }" value="Arama" name="s" id="s"/>
+<input type="submit" id="searchsubmit" value=""/>
+</form>
+</div></div>
+<div class="clr"></div>
+</div>
+
+
+
+<div class="content">
+<h2>Doktora Yeterlilik Kriterleri</h2>
+
+<div class="post">
+
+
+					<div class="entry-content">
+						<img class="aligncenter size-full wp-image-6613" src="wp-content/uploads/2015/08/Birrete_doctoral.jpg" alt="Birrete_doctoral" width="600" />
+
+<strong>Doktora Yeterlilik Kriterleri</strong>
+<ol>
+	<li>2016 Aralık döneminden başlamak üzere ulusal ya da uluslararası hakemli bir dergide yayımlanmış makale. (2015 Aralık döneminde yayımlanmış olma şartı yoktur)</li>
+	<li>Sözlü sınav öğrencinin doktora yapacağı alanda hazırladığı literatürde yürütülen temel tartışmaların etrafında gerçekleştirilecektir. Bu bağlamda öğrenci yerli-yabancı kitap, tez, makale vb. en az 50 eserlik bir literatür hazırlamalıdır.</li>
+	<li>Doktora yeterlilik sınavına girecek öğrenci aşağıda temel dört alandan birinde yer alan belli sayıda* sorudan kurayla 2 soru seçerek cevaplar. *(Temel alanlarda yer alan soru sayısı alana göre değişebilir)
+<ul>
+	<li>I. Etik, Estetik, Toplum Bilimleri, Politik Felsefe, Tarih Felsefesi</li>
+	<li>II. Dil Felsefesi, Bilim Felsefesi, Matematik Felsefesi, Mantık, Zihin Felsefesi</li>
+	<li>III. Epistemoloji, Ontoloji, Metafizik, Felsefe Tarihi, Fenomenoloji</li>
+	<li>IV. Türk İslâm Felsefesi, Modern Dönem Türk Düşüncesi</li>
+</ul>
+</li>
+</ol>
+<strong>Sorular</strong>
+<ul>
+	<li><strong>I. Etik, Estetik, Toplum Bilimleri, Politik Felsefe, Tarih Felsefesi</strong>
+<ol>
+	<li>Dionysos ve Apollon arasındaki ilişki Herakleitos ve Platon'un felsefelerine nasıl yansımıştır?</li>
+	<li>Heidegger’de modern teknik ile alethia kavramı arasındaki ilişki nasıldır?</li>
+	<li>Kant’ın felsefesinde metafizik neden bir savaş alanı olarak nitelendirilmiştir?</li>
+	<li>Kant'ın <em>Yargı Yetisinin Eleştirisi</em> adlı eserinden insan hangi düşünme biçimiyle ne türden temel kavramları, nasıl oluşturmaktadır?</li>
+	<li>Modern nedensellik (<em>causality</em>) ile Antik Yunan döneminde nedensellik (<em>aitia</em>) arasındaki farklar nelerdir?</li>
+	<li>Kant’ın felsefesinde transandant ile transendantal kavramları bilgi oluşturmada nasıl bir işleve sahiptirler?</li>
+	<li>Platon’un <em>Devlet</em>’teki temel iddiasını desteklemeye çalışan argümanlarını, temel yorum ve eleştirileri de belirterek değerlendiriniz.</li>
+	<li>Aristoteles’in <em>Nikomakhos’a Etik</em>’teki işlev argümanını kurup onunla ilgili temel yorum ve eleştirileri de belirterek değerlendiriniz.</li>
+	<li>Platon ile Aristoteles’in <em>eudaimonia</em> anlayışları arasındaki temel farklar nelerdir, Aristoteles’in bu konuda Platon'a eleştirilerini de belirterek açıklayınız.</li>
+	<li>Farklı türlerini de belirterek, faydacı etiğin dayandığı temel argümanlar nelerdir, temel yorum ve eleştirileri de belirterek değerlendiriniz.</li>
+	<li>Kant etiğinin dayandığı temel argümanlar nelerdir, temel yorum ve eleştirileri de belirterek değerlendiriniz.</li>
+	<li>Normatif etik teorilerin sınıflandırılması nasıl yapılabilir; bu sınıflandırmada Antikçağ normatif etik teorilerinin yeri ne olabilir, değerlendiriniz.</li>
+	<li>Ahlaki ifadelerin doğası, doğru ya da yanlış olup olamayacakları, temellendirilip temellendirilemeyecekleri, doğru ya da yanlış olabilir ve temellendirilebilir iseler bunların nasıl olabileceği konusunda ileri sürülen temel teorileri, bu teorilerin temel yorum ve eleştirilerini de belirterek açıklayınız.</li>
+	<li>Metaetiğin temel problemlerini ve bu problemlerle ilgili temel yaklaşımları açıklayınız.</li>
+	<li>Günümüzde uygulamalı etiğin ele aldığı belli başlı problemlerin ne olduğunu, bu problemlerle ilgili temel görüşleri de de belirterek açıklayınız.</li>
+	<li>İyi-durumdalık (well-being) hakkındaki temel teoriler nelerdir, bunların sınıflandırılması konusundaki yaklaşımları da belirterek açıklayınız.</li>
+	<li>Platon ve Hobbes'u yasa, yasanın kökeni ve meşruiyet kaynakları açısından karşılaştırınız.</li>
+	<li>Antik, modern ve çağdaş demokrasi tanımlarını en az birer filozof metnine referansla benzerlikleri ve farklılıkları açısından ortaya koyunuz.</li>
+	<li>Marx, Kierkegaard ve Nietzsche'nin özne sorununa getirdikleri yaklaşımları Hegel'le ilişki içerisinde değerlendiriniz.</li>
+	<li>Rousseau, Montesquieu ve Hegel'i sivil toplum-devlet ilişkisi açısından karşılaştırınız.</li>
+	<li>Egemenlik anlayışındaki dönüşümü iki modern ve iki çağdaş düşünür üzerinden ele alınız.</li>
+	<li>Politika bir bilim midir? Aristoteles ve Machiavelli üzerinden tartışınız.</li>
+	<li>Özgürlük talebi ile adalet arayışı ayrılabilir mi? Platon, Rawls ve Habermas metinlerinde bu soruya yanıt arayınız.</li>
+	<li>Rasyonalite eleştirisi açısından Adorno, Benjamin ve Foucault'ın konumlarını inceleyiniz.</li>
+	<li>Kant'ın (<em>Ahlak Metafiziğinin Temellendirilmesi</em> kitabından farklı olarak) <em>Ahlak Metafiziği</em>'nde ortaya koyduğu özgürlük ve normativite kavrayışını, Hegel'in normlarda ve paylaşılan pratiklerde nesnelleştirilmiş akıl olarak düşündüğü <em>Sittlichkeit</em> kavramı ile kıyaslayınız.</li>
+	<li>Sanat bilimden daha az mı gereklidir? Kant <em>3. Kritik</em> ve Hegel'in <em>Estetik</em> yapıtları çerçevesinde tartışınız.</li>
+	<li>Felsefenin dünya sorunlarının çözümüne  yaptığı  katkıları açıklayınız.</li>
+	<li>Özgürlüklerin  artması  ile gelir dağılımı dengesi arasındaki  ilişkileri tartışınız.</li>
+	<li>Tarih metafiziğinin temellendirilmesi  hangi  kavramlarla yapılmaktadır?</li>
+	<li>Küresellik   şartları  göz önüne alındığında, siyaset anlayışlarının  hangi  değerler  üzerinden  gelişeceği hakkında bir değerlendirme  yapınız.</li>
+	<li>Sorumluluk  ile  özgürlük  kavramları  arasındaki  çelişkileri  ve uyumu  açıklayınız.</li>
+	<li>Kimlik sorununu felsefe açısından ele alarak, küreselleşmenin kimliklerin dönüşümü üzerindeki etkilerini değerlendiriniz.</li>
+	<li>Eşitlik ve özgürlük kavramlarını tanımlayarak bu kavramlar arasındaki ilişkiyi sunan iki karşıt argüman geliştiriniz ve bu argümanları savununuz.</li>
+	<li>İnsanın kendini anlamlandırması ile tarihlilik arasındaki ilişkiyi tartışınız.</li>
+	<li>Anlam-değer ilişkisini kurarak, insanın evreni ve kendisini anlamlandırmasında hangi değerlerin ön plana çıktığını belirtiniz.</li>
+	<li>Tarih bilgisinin güvenilirliği sorununu tarih felsefesi açısından tartışınız.</li>
+	<li>Popper’ın tarihin anlamı olmadığına ilişkin görüşünü eleştirel olarak değerlendirerek, kendi düşünceniz doğrultusunda tartışınız.</li>
+</ol>
+</li>
+	<li><strong>II. Dil Felsefesi, Bilim Felsefesi, Matematik Felsefesi, Mantık, Zihin Felsefesi</strong>
+<ol>
+	<li>Frege’nin anlam ile gönderim arasında yaptığı ayrımı Russell’ın belirli betimlemeler hakkındaki değerlendirmesi ve Kripke’nin katı gösterici anlayışı üzerinden tartışınız.</li>
+	<li>Kant’ın <em>Saf Aklın Eleştirisi</em>’nde ileri sürdüğü metafizik anlayışın Wittgenstein’ın <em>Tractastus</em>’u açısından nasıl değerlendirilebileceğini tartışınız.</li>
+	<li>Gödel’in tamamlanamazlık teorisinden sonra matematiğin temellendirilmesinde ‘görü’nün durumunu tartışınız.</li>
+	<li>Popper’ın doğrulamacılık eleştirisi, Lakatatos’un araştırma programı önerisi, Quine’ın sanılar ağı bilimin neliği hakkında ne söylemektedir, tartışınız.</li>
+	<li>Mantıkta devrim yaşanmış mıdır? Yaşanmışsa kim(ler) hangi çerçevede gerçekleştirmiş, yaşanmamışsa neden yaşanmamıştır?</li>
+	<li>Tarski, geleneksel doğruluk anlayışlarını neden eksik bulmuştur? Kendi doğruluk anlayışı bu eksikliği nasıl çözmüştür?</li>
+	<li>Zihnin fiziksel süreçlere indirgenmesine karşı ileri sürülen argümanların geçerliliğini tartışınız.</li>
+	<li>Analitik yargılar ile sentetik yargılar arasındaki ayrımı analitik felsefe geleneği açısından tartışınız.</li>
+	<li>Matematik bir nesne nasıl ortaya çıkar? İnşa mı edilir, kurgu mudur, deneysel kökenli midir yoksa Platonik bir alandan mı yakalanır, tartışınız.</li>
+	<li>Sıkı içerme (strict implication) ile maddi içerme (material implication) ayrım nasıl ortaya çıkmıştır, ayrımın 20. yüzyıl mantık tartışmaları içindeki yerini açıklayınız.</li>
+	<li>Mantık ilkeleri evrensel midir? Çelişkili bir mantık kurulabilir mi?</li>
+	<li>Searl’ün ‘çin odası argümanı’ ile Turing testi karşıtlığını ‘<em>qualia</em>’ sorunu üzerinden tartışınız.</li>
+	<li>Bir felsefi sorun olarak ‘anlam’ın 20. yüzyıl felsefesinde tartışma bağlamını açıklayınız.</li>
+	<li>Doğal dil ile sembolik dil arasındaki bağıntıyı dil oyunları ve mantık türleri üzerinden tartışınız.</li>
+	<li>Bilimsel süreçlerin değişimini açıklamaya yönelik üç kuramı görünüş-gerçek, doğruluk ve geçerlilik üzerinden tartışınız.</li>
+</ol>
+</li>
+	<li><strong>III. Epistemoloji, Ontoloji, Metafizik, Felsefe Tarihi, Fenomenoloji</strong>
+<ol>
+	<li>Platon’u idealist bir ontoloji ve epistemoloji oluşturmaya yönelten toplumsal ve politik etmenler neler olabilir?</li>
+	<li>Aristoteles’in Platon’un idealar kuramını eleştirisini anlatıp yorumlayınız.</li>
+	<li>Descartes’ın modern felsefe için belirleyici olmasının nedenini açıklayınız.</li>
+	<li>Kant’ın transendental idealizmi Hume’un empirist kuşkuculuğundan nasıl etkilenmiştir?</li>
+	<li>Fichte’nin Kant’ın ‘kendinde-şey’ (Ding an sich) sınır kavramını eleştirisi Alman İdealizminin gelişimi açısından ne anlama gelir?</li>
+	<li>Schlelling’in nesnel idealizmi Spinoza’nın töz ve doğa anlayışıyla nasıl bir dolayıma sahiptir?</li>
+	<li>Hegel’in mutlak idealizminde ‘mutlak’ ve ‘idealizm’ kavramları nasıl tanımlanabilir?</li>
+	<li>Hegel’de mutlak idea ve mutlak tin arasında nasıl bir ilişkiden söz edilebilir?</li>
+	<li>Adorno ve Horkheimer’ın Aydınlanmacı akıl ve zihniyeti eleştirisini yorumlayınız.</li>
+	<li>Frankfurt Okulu’nu düşünürleri Hegel ve Marx’ın görüşlerinden nasıl beslenmişlerdir?</li>
+	<li>Felsefe sorusunu tanımlayınız ve örneklerle  açıklayınız.</li>
+	<li>Felsefe yapmak ne anlama gelmektedir?</li>
+	<li>“Küresellik, felsefede  varılması gerekli en  önemli hedeflerden biridir.” Yargısını savunmak ve reddetmek açılarından değerlendiriniz.</li>
+	<li>"Tez  nedir?" sorusunu doktora tezi bağlamında tartışınız.</li>
+	<li>Bir  felsefe metnini  diğer  metinlerden  ayıran  özellikler  nelerdir? Karşılaştırma  yaparak  açıklayınız.</li>
+	<li>Felsefeci olarak felsefeye nasıl bir katkı sağlayacağınızı düşünüyorsunuz? Çalışmayı  düşündüğünüz  tez konusu  bağlamında  bir  değerlendirme  yapınız.</li>
+	<li>Felsefe yönteminin temel  kavramlarını açıklayınız ve birbirleriyle  ilişkilerini yazınız.</li>
+	<li>Herhangi bir konunun felsefeleştirilmesi   nasıl  yapılmaktadır; bir örnekle  açıklayınız.</li>
+	<li>Bilgelik, felsefenin çıktığı kaynak mıdır yoksa  ulaşmak istediği hedef midir? Sorusunu eleştirel bir tarzda  analiz ediniz.</li>
+	<li>20. yüzyılda yapılan bilimsel keşifler  felsefe  yapmayı  nasıl etkilemektedir?</li>
+</ol>
+</li>
+	<li><strong>IV. Türk İslâm Felsefesi, Modern Dönem Türk Düşüncesi</strong>
+<ol>
+	<li>“Uzlaştırma” kavramı bağlamında İslam dünyasının tevarüs ettiği felsefî geleneğin temel özelliklerini açıklayıp MS. V. yüzyılda İskenderiye’de oluşturulan felsefe müfredatı hakkında bilgi veriniz.</li>
+	<li>Kindî, Fârâbî, İhvân-ı Safâ ve İbn Sînâ çerçevesinde metafiziğin konusuna dair İslam felsefe geleneğindeki tartışmaları değerlendiriniz.</li>
+	<li>Kelâm ve felsefenin Tanrı-âlem ilişkisine yaklaşımlarını âlemin ezeliliği ve Tanrı’nın tikellere dair bilgisi tartışmaları açısından değerlendiriniz.</li>
+	<li>Felsefe-kelam etkileşimi açısından Fahreddin er-Râzî’nin İslam düşünce tarihindeki konumunu değerlendiriniz.</li>
+	<li>Eflatun’un filozof-kral’ı ile Fârâbî’nin filozof-peygamber’ini din-felsefe-siyaset ilişkileri açısından karşılaştırınız.</li>
+	<li>Te’vil kavramı bağlamında İbn Rüşd’ün din-felsefe ilişkisi hakkındaki görüşlerini değerlendirip, dinî nasları anlama ve yorumlama açısından filozoflara, kelamcılara ve halka biçtiği rolü açıklayınız.</li>
+	<li>Beden-nefs ilişkisi açısından, İslam ahlâk literatüründe yaygın olarak kabul edildiği şekliyle temel erdemleri açıklayıp Eflatun ve Aristoteles’teki kökenleriyle ilişkilendiriniz.</li>
+	<li>Fârâbî’ye göre öncül türleri ve bunların kesinlik değerini açıklayınız.</li>
+	<li>İbn Sînâ açısından kelamda kullanılan öncüllerin epistemik değerini açıklayıp kelam disipline biçtiği konumu değerlendiriniz.</li>
+	<li>“Varlık niçin var da yok değil?” sorusuna sizce Fârâbî nasıl cevap verirdi? Gerekçeleriyle açıklayınız.</li>
+	<li>Aristoteles’in İkinci Analitikler’deki “Hiçbir bilim kendi konusunu ispatlayamaz” ilkesini dikkate alarak İbn Sînâ’nın felsefî ilimler tasnifini açıklayınız.</li>
+	<li>İbn Sînâ açısından niçin özü itibariyle zorunlu varlık vardır ve bir tanedir?</li>
+	<li>Varlık-mahiyet ve zorunlu-mümkün-imkânsız kavramlarını dikkate alarak (1) Tanrı, (2) birinci akıl, (3) masadaki kitap (5) tasarımcının hayal ettiği araba ve (6) yanmayan ateşin ontolojik konumlarını gerekçeleriyle açıklayınız.</li>
+	<li>İbn Sînâ felsefesinde faal aklın ontolojik ve epistemolojik konumunu açıklayıp Aristoteles’in aktif akıl kavramıyla karşılaştırınız.</li>
+	<li>Plotinus ile Fârâbî’nin sudûr teorilerini karşılaştırınız.</li>
+	<li>“Mille” kavramı çerçevesinde Fârâbî’nin din-felsefe ilişkisi hakkındaki görüşlerini açıklayınız.</li>
+	<li>Sizce “Keşke bu dünyada hiç kötülük olmasa!” şeklindeki bir temenniye İbn Sînâ nasıl cevap verirdi? Gazzâlî’nin “mümkün âlemlerin en iyisi” anlayışıyla karşılaştırınız.</li>
+	<li>Determinizm ve vesilecilik akımları çerçevesinde ateş ile pamuğun yan yana geldiği her durumda ateşin pamuğu yakması durumunu İbn Sînâ ve Gazzâlî açısından gerekçelendirerek açıklayınız.</li>
+	<li>İbn Sînâ’ya göre “Masanın üzerindeki ayva sarıdır” ve “Bu ayvayı sevmiyorum” yargılarına ulaşmam ile rüyamda “mor bir ayva” görmem hangi süreçler neticesinde gerçekleşmektedir?</li>
+	<li>İbn Sînâ’ya göre “bu insan”dan “insanlık” akledilirine ulaşmamız nasıl bir süreçte gerçekleşmektedir?</li>
+	<li>“Tabii organik cismin ilk yetkinliği” tanımı çerçevesinde nefs kavramının mahiyetini ve bedenle ilişkisini açıklayınız.</li>
+	<li>“Peygamberin yasa koyuculuğu” bağlamında İbn Sînâ’nın pratik felsefeye yaklaşımını değerlendiriniz.</li>
+	<li>İbn Sînâ felsefesinin sonraki yüzyıllarda etkili oluşunun temel sebepleri nelerdir?</li>
+	<li>Gazzâlî ve İbn Rüşd’ün din-felsefe ilişkisi hakkındaki görüşlerini karşılaştırınız.</li>
+	<li>İbn Sînâ’ya göre vahyin, nübüvvetin ve mucizenin imkânı felsefî olarak nasıl gerekçelendirilebilir? Sezgi kavramı merkezinde değerlendiriniz.</li>
+	<li>İslam siyaset düşüncesinin teşekkülünde Eflatun ve Aristoteles’in siyaset felsefelerinin etkisini tarihî ve doktrinel olarak değerlendiriniz.</li>
+	<li>Siyasî ve ahlakî içerimleri açısından adalet kavramının İslam düşüncesindeki yeri hakkında bilgi veriniz.</li>
+	<li>Otorite kavramı açısından klasik dönem İslam ve Hıristiyanlık’ın siyasete yaklaşımlarını mukayese ediniz.</li>
+	<li>Osmanlı kuruluş döneminde kurulan medrese ve sonrasındaki eğitim müfredatı çerçevesinde İslam felsefesinin hangi metinler üzerinden işlendiğini açıklayınız?</li>
+	<li>İslâm dünyasında <em>Îsâgûcî</em>'nin serüveni hakkında bilgi verdikten sonra, Ebherî'nin <em>Îsâgûcî</em>'sini Profiryus'unkiyle mukayese ederek ayrıntılı bilgi veriniz.</li>
+	<li>Osmanlı'nın kuruluşunda devraldığı düşünce mirası olarak kelâm-felsefe-tasavvuf'un iç içe geçmesini, Fahreddin er-Râzî, İbnü'l-Arabî ya da Sadreddin Konevî'den seçtiğiniz bir örnek sorun etrafında açıklayınız.</li>
+	<li>Kemalpaşazade'nin <em>vücud-ı zihnî</em> hakkındaki düşüncelerini açıklayınız.</li>
+	<li>Kadızadeli hareketinin temel kabullerini belirttikten sonra Kadızadeliler-Sivasîler arasındaki fikrî mücadelenin hangi tartışmalar etrafında oluştuğunu belirtiniz.</li>
+	<li>Osmanlı döneminde din-siyaset ilişkisini nizâm-ı âlem kavramı bağlamında tartışınız.</li>
+	<li>Tanzimat sonrasında ortaya çıkan siyasi ve fikrî akımları öne çıkan isimler eşliğinde açıklayınız?</li>
+	<li>Osmanlı Modernleşmesi bağlamında kavim-ümmet-ulus-millet kavramlarının ilişkisini açıklayınız.</li>
+	<li>Türk-Japon modernleşmesinin benzer ve farklı yönlerini belirtiniz.</li>
+	<li>Tanzimat sonrasında bilginin popülerleşmesinin aracı olan süreli yayıncılığın serüveni hakkında bilgi veriniz.</li>
+	<li>Tanzimat dönemindeki dile ilişkin tartışmalarla Osmanlı sonrasındaki "dil tartışmaları" arasında bir ilişki kurulabilir mi?</li>
+	<li>"Harf inkılâbı dil meselemizin esası değil bir cüz'üdür" ifadesini dil-din ilişkisini göz önünde bulundurarak tartışınız?</li>
+	<li>II. Meşrutiyet’in ilanıyla ortaya çıkan "Basın Patlaması" ile sonrasındaki süreçte gün yüzüne çıkan "kadın hareketi" hakkında bilgi verin?</li>
+	<li>Tanzimat döneminin entelektüel profili için Osmanlıcılık-İslamcılık-Türkçülük ve Batıcılık neden geçişken bir yapı arz eder? Örnekler üzerinden açıklayınız.</li>
+	<li>Kant'ın eleştirel felsefesi bağlamında, Tanrı'nın varlığı kanıtlanabilir mi?</li>
+	<li>Tanrı'nın varlığı konusunda en eski ve en sık başvurulan delil "Ontolojik Delil", neden en sık dile getirilen delil olmuştur? Bu delile Hume ve Kant tarafından getirilen eleştirileri nasıl değerlendirirsiniz?</li>
+	<li>Din felsefesi yapma tarzlarından yalnızca bir tanesi olan "Analitik din felsefesi"nin din dili vurgusunu nasıl değerlendirirsiniz? Din felsefesi, dini ifadelerin analizi öncelenerek yapılabir mi?</li>
+	<li>Hegel, "Tanrı mutlak tindir" derken, panteist bir görüşü mü yansıtmaktadır?</li>
+	<li>Fichte'nin "Tüm Vahiy Eleştirisi" isimli kitabı nedeniyle ateizmle suçlanmasına hangi iddiası neden olmuştur?</li>
+	<li>Schleiermacher'in psikolojik Hermeneutik anlayışını göz önünde bulundurarak, İslam vahyini hermeneutik bir yaklaşımla anlamayı deneyebilir miyiz?</li>
+	<li>Schleiermacher ve Dilthey'in hermeneutik yaklaşımlarındaki temel fark nedir?</li>
+	<li>Din ve felsefe ilişkisi bakımından, akıl tarihsel midir?</li>
+</ol>
+</li>
+</ul>
+											</div><!-- .entry-content -->
+
+
+<table align="right" width="100%"><tr align="right"><td>07/08/2015</td><tr align="right"><td>3883 defa okundu</td></tr></tr></table></td></tr></table>
+<table align="left" width="30%" ><tr align="left"><br /><td>
+<a href="http://twitter.com/home?status=http%3A%2F%2Fedebiyat.istanbul.edu.tr%2Ffelsefe%2F%3Fp%3D6612%20Doktora%20Yeterlilik%20Kriterleri" target="_blank"><img src="icon/tweet.png" width="18" height="18"></a> </td><td>
+<a href="http://www.facebook.com/share.php?u=http://edebiyat.istanbul.edu.tr/felsefe/?p=6612" target="_blank"><img src="icon/face.png" width="18" height="18"></a> </td><td>
+<a href=index578a.html?p=6612&amp;upm_export=doc target="_blank"><img src="icon/word.png" width="18" height="18"></a> </td><td>
+<a href=index68be.html?p=6612&amp;upm_export=text target="_blank"><img src="icon/text.png" width="18" height="18"></a> </td><td>
+<a href=p%3d6612%26upm_export%3dprint.html target="_blank"><img src="icon/print.png" width="18" ></a> </td></tr></table>
+</div>
+<div class="cats-content" id="cats-content">
+<ul>
+
+<li><a href="index31f9.html?p=7494">&#8220;Kapı&#8221; Metaforu Üzerine (10 Nisan)</a></li>
+<li><a href="index3f61.html?p=7490">Doç. Dr. M. Ertan Kardeş (23 Mar)</a></li>
+<li><a href="index503b.html?p=7481">Dr. Öğr. Ü. Arzu İbişi Temelli (17 Mar)</a></li>
+<li><a href="indexa7d8.html?p=7470">Prof. Dr. Ayhan Bıçak (14 Mart)</a></li>
+<li><a href="index20d9.html?p=6436">Ders Programı</a></li>
+<li><a href="index6069.html?p=7430">Prof. Dr. Şafak Ural&#8217;a Saygı Toplantısı</a></li>
+<li><a href="indexe1cb.html?p=7427">Abdessamed Taibi</a></li>
+<li><a href="indexfd07.html?p=7422">İSEDER Atölyeleri</a></li>
+<li><a href="index68d8.html?p=7414">VII. Mantık Çalıştayı Kitabı yayımlandı</a></li>
+<li><a href="index9d09.html?p=7392">Dar Kapıdaki Mesih</a></li>
+</ul>
+<script language="javascript">setPage()</script>
+</div>
+<div class="clr"></div>
+</div>
+
+	
+<div class="clr"></div>
+<div class="unifoot">
+<div class="adres">İstanbul Üniversitesi  Edebiyat Fakültesi
+<p>Ordu Cad. No. 196, 34459 Laleli / İstanbul</p>
+<p>Tel: 0 (212) 440 00 00</p>
+
+</div>
+
+
+<div class="clr"></div>
+</div>
+<div class="clr"></div>
+<div class="footer">
+<span class="left">Her hakkı İstanbul Üniversitesi'ne aittir. Copyright 2011.</span>
+<div class="right">
+<ul>
+<li><a href="http://edebiyat.istanbul.edu.tr/felsefe">Site Haritası</a></li>
+<li><a href="index3d1a.html?p=5957">İletişim Bilgileri</a></li>
+<li><a href="https://www.facebook.com/iufelsefe" target="_blank">Facebook</a></li>
+<li><a href="https://twitter.com/iufelsefe" target="_blank" >Twitter</a></li>
+</ul>
+</div>
+</div>
+<div class="clr"></div>
+<!-- ngg_resource_manager_marker --><script type='text/javascript' src='wp-includes/js/comment-reply.minef15.js?ver=4.8'></script>
+<script type='text/javascript' src='wp-content/plugins/lightbox-plus/js/jquery.colorbox.1.5.9-min7fb9.js?ver=1.5.9'></script>
+<script type='text/javascript' src='wp-includes/js/wp-embed.minef15.js?ver=4.8'></script>
+<!-- Lightbox Plus Colorbox v2.7.2/1.5.9 - 2013.01.24 - Message: 0-->
+<script type="text/javascript">
+jQuery(document).ready(function($){
+  $("a[rel*=lightbox]").colorbox({speed:350,initialWidth:"300",initialHeight:"100",opacity:0.8,loop:false,scrolling:false,arrowKey:false,top:false,right:false,bottom:false,left:false});
+});
+</script>
+</body>
+
+<!-- Mirrored from edebiyat.istanbul.edu.tr/felsefe/?p=6612 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 22 Mar 2018 12:30:25 GMT -->
+</html>

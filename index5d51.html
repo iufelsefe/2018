@@ -1,0 +1,442 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from edebiyat.istanbul.edu.tr/felsefe/?p=6861 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 22 Mar 2018 12:56:26 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" >
+        <!--[if IE 9]>
+        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" >
+        <![endif]-->
+        <!--[if IE 8]>
+        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" >
+        <![endif]-->
+        <!--[if IE 7]>
+        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" >
+        <![endif]-->
+<meta NAME="keywords" CONTENT="İstanbul Üniversitesi, Istanbul University, Eğitim, Education, Akademik, Academy, İstanbul, Istanbul, University, Üniversite, Student, Öğrenci, Turkey">
+<meta NAME="description" CONTENT="İstanbul Üniversitesi | Tarihten Geleceğe Bilim Köprüsü - 1453">
+<meta NAME="author" CONTENT="İstanbul Üniversitesi Bilgi İşlem Daire Başkanlığı">
+<meta name="google-site-verification" content="KIn8WeplSWedUUx5vVZiVnhacrOHkCLWuQPvp0Ags_I" />
+<META NAME="googlebot" CONTENT="index, follow">
+<META NAME="robots" CONTENT="index, follow">
+<meta name="robots" content="all">
+<meta name="revisit-after" content="1 Days">
+<title>Doğan Özlem Sempozyumu (5 May) | İstanbul Üniversitesi Edebiyat Fakültesi</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="stylesheet" type="text/css" media="all" href="wp-content/themes/1453/style.css" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+<script type="text/javascript" src="highlight.js"></script>
+<script src="http://edebiyat.istanbul.edu.tr/wp-content/plugins/wp-spry-menu/SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
+<script type="text/javascript" src="jquery.scrollTo.js"></script>
+<script src="jcarousellite_1.0.1c4_new.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function() {
+	$(".duyuru-wrapper").jCarouselLite({
+		horizontal: true,
+		hoverPause: true,
+		btnPrev: ".back",
+		btnNext: ".next",
+		visible: 1,
+		auto:10000,
+		speed:500
+	});
+});
+</script>
+<script>
+
+$(document).ready(function() {
+
+	//Speed of the slideshow
+	var speed = 5000;
+	
+	//You have to specify width and height in #slider CSS properties
+	//After that, the following script will set the width and height accordingly
+	$('#mask-gallery, #gallery li').width($('#slider').width());	
+	$('#gallery').width($('#slider').width() * $('#gallery li').length);
+	$('#mask-gallery, #gallery li, #mask-excerpt, #excerpt li').height($('#slider').height());
+	
+	//Assign a timer, so it will run periodically
+	var run = setInterval('newsscoller(0)', speed);	
+	
+	$('#gallery li:first, #excerpt li:first').addClass('selected');
+
+	//Pause the slidershow with clearInterval
+	$('#btn-pause').click(function () {
+		clearInterval(run);
+		return false;
+	});
+
+	//Continue the slideshow with setInterval
+	$('#btn-play').click(function () {
+		run = setInterval('newsscoller(0)', speed);	
+		return false;
+	});
+	
+	//Next Slide by calling the function
+	$('#btn-next').click(function () {
+		newsscoller(0);	
+		return false;
+	});	
+
+	//Previous slide by passing prev=1
+	$('#btn-prev').click(function () {
+		newsscoller(1);	
+		return false;
+	});	
+	
+	//Mouse over, pause it, on mouse out, resume the slider show
+	$('#slider').hover(
+	
+		function() {
+			clearInterval(run);
+		}, 
+		function() {
+			run = setInterval('newsscoller(0)', speed);	
+		}
+	); 	
+	
+});
+
+
+function newsscoller(prev) {
+
+	//Get the current selected item (with selected class), if none was found, get the first item
+	var current_image = $('#gallery li.selected').length ? $('#gallery li.selected') : $('#gallery li:first');
+	var current_excerpt = $('#excerpt li.selected').length ? $('#excerpt li.selected') : $('#excerpt li:first');
+
+	//if prev is set to 1 (previous item)
+	if (prev) {
+		
+		//Get previous sibling
+		var next_image = (current_image.prev().length) ? current_image.prev() : $('#gallery li:last');
+		var next_excerpt = (current_excerpt.prev().length) ? current_excerpt.prev() : $('#excerpt li:last');
+	
+	//if prev is set to 0 (next item)
+	} else {
+		
+		//Get next sibling
+		var next_image = (current_image.next().length) ? current_image.next() : $('#gallery li:first');
+		var next_excerpt = (current_excerpt.next().length) ? current_excerpt.next() : $('#excerpt li:first');
+	}
+
+	//clear the selected class
+	$('#excerpt li, #gallery li').removeClass('selected');
+	
+	//reassign the selected class to current items
+	next_image.addClass('selected');
+	next_excerpt.addClass('selected');
+
+	//Scroll the items
+	$('#mask-gallery').scrollTo(next_image, 800);		
+	$('#mask-excerpt').scrollTo(next_excerpt, 800);					
+	
+}
+
+
+
+</script>
+<script type="text/javascript">
+$(function() {
+$(".img-four ul li:last-child").addClass("son");
+});
+</script>
+
+<link rel="pingback" href="xmlrpc.php" />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link rel="alternate" type="application/rss+xml" title="İstanbul Üniversitesi Edebiyat Fakültesi &raquo; beslemesi" href="indexd784.html?feed=rss2" />
+<link rel="alternate" type="application/rss+xml" title="İstanbul Üniversitesi Edebiyat Fakültesi &raquo; yorum beslemesi" href="indexa6da.html?feed=comments-rss2" />
+<link rel="alternate" type="application/rss+xml" title="İstanbul Üniversitesi Edebiyat Fakültesi &raquo; Doğan Özlem Sempozyumu (5 May) yorum beslemesi" href="indexb59e.html?feed=rss2&amp;p=6861" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/edebiyat.istanbul.edu.tr\/felsefe\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.8"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,56826,8203,55356,56819),0,0),c=j.toDataURL(),b===c&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55358,56794,8205,9794,65039),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55358,56794,8203,9794,65039),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<style type="text/css">
+	.wp-pagenavi{margin-left:auto !important; margin-right:auto; !important}
+	</style>
+  <link rel='stylesheet' id='slideshow-gallery-css'  href='wp-content/plugins/slideshow-gallery/css/gallery-css424c.css?1=1&amp;resizeimages=N&amp;width=964&amp;height=400&amp;border=0px+none&amp;background=%23FFFFFF&amp;infobackground=%23546e34&amp;infocolor=%23fff&amp;ver=1.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='gtranslate-style-css'  href='wp-content/plugins/gtranslate/gtranslate-style16ef15.css?ver=4.8' type='text/css' media='all' />
+<link rel='stylesheet' id='tablepress-default-css'  href='wp-content/plugins/tablepress/css/default.min4b1d.css?ver=1.8' type='text/css' media='all' />
+<link rel='stylesheet' id='easytabs-css'  href='wp-content/plugins/wordpress-tabs-slides/easytabs/css/easy-responsive-tabsb95e.css?ver=2.0.3' type='text/css' media='all' />
+<link rel='stylesheet' id='tabs-slides-css'  href='wp-content/plugins/wordpress-tabs-slides/style/greenb95e.css?ver=2.0.3' type='text/css' media='all' />
+<link rel='stylesheet' id='tabs-slides-hacks-css'  href='wp-content/plugins/wordpress-tabs-slides/hacksb95e.css?ver=2.0.3' type='text/css' media='all' />
+<link rel='stylesheet' id='lightboxStyle-css'  href='wp-content/plugins/lightbox-plus/css/framed/colorbox.mineed8.css?ver=2.7.2' type='text/css' media='screen' />
+<link rel='stylesheet' id='wp-pagenavi-style-css'  href='wp-content/plugins/wp-pagenavi-style/css/css3_yellow_glossy5152.css?ver=1.0' type='text/css' media='all' />
+<script type='text/javascript' src='wp-includes/js/jquery/jqueryb8ff.js?ver=1.12.4'></script>
+<script type='text/javascript' src='wp-includes/js/jquery/jquery-migrate.min330a.js?ver=1.4.1'></script>
+<script type='text/javascript' src='wp-content/plugins/slideshow-gallery/js/gallery5152.js?ver=1.0'></script>
+<script type='text/javascript' src='wp-content/plugins/rbl-navigator/js/rbl-navigator84e2.js?ver=1.00'></script>
+<script type='text/javascript' src='wp-content/plugins/gtranslate/jquery-translateef15.js?ver=4.8'></script>
+<script type='text/javascript' src='wp-content/plugins/wordpress-tabs-slides/ts/tabs_slidesb95e.js?ver=2.0.3'></script>
+<script type='text/javascript' src='wp-content/plugins/wordpress-tabs-slides/ts/tabs_slides_opt_loaderb95e.js?ver=2.0.3'></script>
+<script type='text/javascript' src='wp-content/plugins/wordpress-tabs-slides/easytabs/js/easyResponsiveTabsb95e.js?ver=2.0.3'></script>
+<link rel='https://api.w.org/' href='index52f0.html?rest_route=/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Felsefe &#038; Sanat Sempozyumu (28 Nis)' href='index8ff0.html?p=6759' />
+<link rel='next' title='İstanbul Felsefe Seminerleri (12 May)' href='index3024.html?p=6839' />
+<meta name="generator" content="WordPress 4.8" />
+<link rel="canonical" href="index5d51.html?p=6861" />
+<link rel='shortlink' href='index5d51.html?p=6861' />
+<link rel="alternate" type="application/json+oembed" href="index2f45.html?rest_route=%2Foembed%2F1.0%2Fembed&amp;url=http%3A%2F%2Fedebiyat.istanbul.edu.tr%2Ffelsefe%2F%3Fp%3D6861" />
+<link rel="alternate" type="text/xml+oembed" href="indexf2db.html?rest_route=%2Foembed%2F1.0%2Fembed&amp;url=http%3A%2F%2Fedebiyat.istanbul.edu.tr%2Ffelsefe%2F%3Fp%3D6861&amp;format=xml" />
+<!-- <meta name="NextGEN" version="2.1.50" /> -->
+<link rel="stylesheet" href="wp-content/plugins/rbl-navigator/css/rbl-navigator.css" type="text/css" media="screen, projection" />        
+        <script type="text/javascript">
+        var tb_pathToImage = "wp-includes/js/thickbox/loadingAnimation.gif";
+		var tb_closeImage = "wp-includes/js/thickbox/tb-close.html";
+		</script>
+        
+        	<style type="text/css">
+	 .wp-pagenavi
+	{
+		font-size:12px !important;
+	}
+	</style>
+	
+<link href="wp-content/plugins/wp-spry-menu/SpryAssets/global.css" type="text/css" rel="stylesheet" />
+
+<script src="wp-content/plugins/wp-spry-menu/SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
+<link href="wp-content/plugins/wp-spry-menu/themes/silver/style.css" type="text/css" rel="stylesheet" /><!-- Vipers Video Quicktags v6.6.0 | http://www.viper007bond.com/wordpress-plugins/vipers-video-quicktags/ -->
+<style type="text/css">
+.vvqbox { display: block; max-width: 100%; visibility: visible !important; margin: 10px auto; } .vvqbox img { max-width: 100%; height: 100%; } .vvqbox object { max-width: 100%; } 
+</style>
+<script type="text/javascript">
+// <![CDATA[
+	var vvqflashvars = {};
+	var vvqparams = { wmode: "opaque", allowfullscreen: "true", allowscriptaccess: "always" };
+	var vvqattributes = {};
+	var vvqexpressinstall = "wp-content/plugins/vipers-video-quicktags/resources/expressinstall.swf";
+// ]]>
+</script>
+	<style type="text/css">
+	.wp-pagenavi{margin-left:auto !important; margin-right:auto; !important}
+	</style>
+  </head>
+
+<body class="post-template-default single single-post postid-6861 single-format-standard">
+<div id="wrapper">
+<div class="header">
+<div id="topmenu">
+<div class="menu-topmenu-container"><ul id="wp_spry_menu" class="MenuBarHorizontal MenuBarActive"><li id="menu-item-5888" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-has-children menu-item-5888"><a href="http://edebiyat.istanbul.edu.tr/felsefe">Ana Sayfa</a>
+<ul  class="sub-menu">
+	<li id="menu-item-5889" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5889"><a href="http://www.istanbul.edu.tr/">İstanbul Üniversitesi Ana Sayfa</a></li>
+	<li id="menu-item-5890" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5890"><a href="http://edebiyat.istanbul.edu.tr/">Edebiyat Fakültesi Ana Sayfası</a></li>
+</ul>
+</li>
+<li id="menu-item-2433" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2433"><a href="#">Hakkımızda</a>
+<ul  class="sub-menu">
+	<li id="menu-item-6455" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6455"><a href="indexc781.html?p=6444">Bölüm Tarihçesi</a></li>
+	<li id="menu-item-7344" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7344"><a href="index8bab.html?p=7339">Bölüm Tanıtım Sunumu</a></li>
+</ul>
+</li>
+<li id="menu-item-6465" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-6465"><a href="#">Akademik</a>
+<ul  class="sub-menu">
+	<li id="menu-item-6553" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6553"><a href="http://aves.istanbul.edu.tr/abicak/">Bölüm Başkanı: Prof. Dr. Ayhan Bıçak</a></li>
+	<li id="menu-item-6466" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-6466"><a href="index6a2d.html?p=6462">Anabilim Dalları</a>
+	<ul  class="sub-menu">
+		<li id="menu-item-6476" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6476"><a href="index4860.html?p=6468">Felsefe Tarihi Anabilim Dalı</a></li>
+		<li id="menu-item-6477" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6477"><a href="index51f5.html?p=6470">Mantık Anabilim Dalı</a></li>
+		<li id="menu-item-6478" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6478"><a href="index1579.html?p=6472">Sistematik Felsefe Anabilim Dalı</a></li>
+		<li id="menu-item-6479" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6479"><a href="indexa36c.html?p=6474">Türk-İslam Düşüncesi Tarihi Anabilim Dalı</a></li>
+	</ul>
+</li>
+	<li id="menu-item-6484" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6484"><a href="index5388.html?p=6374">Akademik Kadro</a></li>
+</ul>
+</li>
+<li id="menu-item-6063" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-6063"><a href="#">Öğrenci</a>
+<ul  class="sub-menu">
+	<li id="menu-item-6964" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6964"><a href="index20d9.html?p=6436">Ders Programı</a></li>
+	<li id="menu-item-6458" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6458"><a href="http://ogrenci.istanbul.edu.tr/?cat=560">Akademik Takvim</a></li>
+	<li id="menu-item-6965" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6965"><a href="index9b13.html?p=6612">Doktora Yeterlilik Kriterleri</a></li>
+	<li id="menu-item-5955" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5955"><a href="http://aksis.istanbul.edu.tr/">Öğrenci Otomasyon Sistemi</a></li>
+	<li id="menu-item-6221" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6221"><a href="http://eogren.istanbul.edu.tr/">E-Öğren (Ortak Dersler)</a></li>
+	<li id="menu-item-6201" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6201"><a href="http://erasmus.istanbul.edu.tr/">ERASMUS Programı</a></li>
+	<li id="menu-item-6457" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6457"><a href="http://erasmusprogram.istanbul.edu.tr/Students/uaikagreements.aspx">ERASMUS Anlaşma Sorgulama</a></li>
+	<li id="menu-item-6200" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6200"><a href="http://farabi.istanbul.edu.tr/">FARABİ Programı</a></li>
+	<li id="menu-item-6460" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6460"><a href="http://mevlana.istanbul.edu.tr/">MEVLANA Programı</a></li>
+	<li id="menu-item-6459" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6459"><a href="http://edebiyat.istanbul.edu.tr/?p=8200">Felsefe Topluluğu</a></li>
+</ul>
+</li>
+<li id="menu-item-6338" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-6338"><a href="#">Bilgi İşlem</a>
+<ul  class="sub-menu">
+	<li id="menu-item-6339" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6339"><a href="http://bilgiislem.istanbul.edu.tr/">Bilgi İşlem Daire Bşk.</a></li>
+	<li id="menu-item-6340" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6340"><a href="http://mail.istanbul.edu.tr/">Personel E-Posta</a></li>
+	<li id="menu-item-6341" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6341"><a href="http://ogr.iu.edu.tr/">Öğrenci E-Posta</a></li>
+	<li id="menu-item-6342" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6342"><a href="http://bilgiislem.istanbul.edu.tr/?p=282">Eduroam Kablosuz İnternet</a></li>
+</ul>
+</li>
+<li id="menu-item-5959" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5959"><a href="index1020.html?p=6554">İletişim</a></li>
+</ul></div><script type="text/javascript">
+<!--
+var wp_spry_menu = new Spry.Widget.MenuBar("wp_spry_menu");
+//-->
+</script>
+</div>
+<div class="clr"></div>
+
+<div class="logobar">
+<h1><a href="http://edebiyat.istanbul.edu.tr/felsefe">İstanbul Üniversitesi</a></h1>
+<div class="logobar-right">
+<div class="logo-menu"><div class="menu-logomenu-container"><ul id="logo-menu" class="logo-menu"><li id="menu-item-6204" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6204"><a href="#">Sıkça Sorulan Sorular</a></li>
+</ul></div></div>
+</div>
+<div class="clr"></div>
+</div>
+<div class="clr"></div>
+<div class="searchbar">
+<div class="sosyal">
+<a class="fb" href="https://www.facebook.com/iufelsefe" target="_blank"></a>
+<a class="twitter" href="https://twitter.com/iufelsefe" target="_blank"></a>
+<a class="youtube" href="https://www.youtube.com/channel/UCWc65LqYU2krXgugQFey7BA"></a>
+<a class="rss" href="indexd784.html?feed=rss2"></a>
+</div><div class="arama">
+<form method="get" id="searchform" action="http://edebiyat.istanbul.edu.tr/felsefe">
+<input type="text" onblur="if(this.value == '') { this.value='Arama'; }" onfocus="if(this.value == 'Arama') { this.value=''; }" value="Arama" name="s" id="s"/>
+<input type="submit" id="searchsubmit" value=""/>
+</form>
+</div></div>
+<div class="clr"></div>
+</div>
+
+
+
+<div class="content">
+<h2>Doğan Özlem Sempozyumu (5 May)</h2>
+
+<div class="post">
+
+
+					<div class="entry-content">
+						<strong>DOĞAN ÖZLEM: FELSEFEDE ELLİ YIL</strong>
+<strong>5 Mayıs 2016 Perşembe</strong>
+
+<strong>Açılış Konuşmaları: 10.00:-10.30</strong>
+Prof. Dr. Ayhan Bıçak (Felsefe Bölüm Başkanı), Prof. Dr. Cengiz Çakmak, Prof. Dr. Mustafa Özkan (Edebiyat Fakültesi Dekanı), Prof. Dr. Doğan Özlem.  
+
+<strong>1. Oturum: 10.30-12.00  </strong>
+Oturum Başkanı: Prof. Dr. Cengiz Çakmak
+
+Prof. Dr. İlber Ortaylı: “…”, 
+Prof. Dr. İoanna Kuçuradi: “…”
+Doğan Hızlan : “Felsefe ve Uzantısı”
+Prof. Dr. Ahmet İnam, “Felsefede Bizim Kuşak”
+Metin Cengiz: "Tanıdığım" Doğan Özlem”
+Mehmet Atay: “Doğan Özlem’in Filozof Olacağı Zaten İlk Günden Belliydi”
+
+<strong>2. Oturum: 13.00-14.30</strong>
+Oturum Başkanı: Prof. Dr. Ahmet İnam
+
+Prof. Dr. Ayşe Durakbaşa: "Doğan Özlem'de Kavramların Tarihi ve Weber Okumaları”
+Doç. Dr. Hasan Şen, “Türkiye’de Sosyal Bilim Algısında Yaşanan Kırılma: Hermeneutik Bir Parantez”
+Doç. Dr. Sema Önal, “Türkiye’de Sosyal Bilimlerin Gelişimi Açısından Doğan Özlem’in Yeri”
+Yrd. Doç.Dr. Levent Kavas , “Yorumsama: Yöntem, Yordam, Tutum”
+Doç. Dr. Güncel Önkal: "Doğan Özlem’in Edebiyat Hermeneutiği Anlayışı”
+Prof. Dr. Nebil Reyhani: "Kant'ın Felsefesiyle İlişkisi Bağlamında Doğan Özleme Göre Felsefede Bir Devrim Olarak Dilthey" 
+
+<strong>3. Oturum:  14.45-16.00</strong>
+Oturum Başkanı:  Prof. Dr. Kadir Çüçen
+
+Prof. Dr. Ömer Naci Soykan, “Doğan Özlem’in Türkiye’de Felsefeye Katkıları” 
+Prof. Dr. Mehmet Bayraktar , “Doğan Özlem ve Türkçede Felsefe Yapma Özlemi”    
+Doç. Dr. Ali Utku, “Doğan Özlem’le Türkiye’de ve Türkçe’de Felsefe”
+Prof. Dr. Örsan Öymen, "Doğan Özlem ve Türkiye'de Felsefe"
+Prof. Dr. Hasan Bülent Gözkan , “Doğan Özlem’de Dil ve Hermeneutik”
+
+<strong>4. Oturum: 16.15-17.00</strong>
+Oturum Başkanı: Prof. Dr. Ayşe Durakbaşa
+
+Prof. Dr. Ayhan Bıçak: “Türkiye’de Tarih Felsefesi Anlayışları”
+Mehmet Akkaya, "Tarih Felsefesine Doğan Özlem İle Bakmak”
+Prof. Dr. Kadir Çüçen: “Doğan Özlem'in Heidegger Çalışmaları Üzerine”
+Yrd. Doç. Dr. Mustafa Günay: “Doğan Özlem’in Felsefe Anlayışında Tarihselcilik ve Hermeneutik
+
+<strong>İÜEF Felsefe Bölümü / Doğan Özlem Sempozyumu </strong>  
+<strong>Tarih:</strong> 5 Mayıs 2016 Perşembe
+<strong>Saat:</strong> 10:00-17.00
+<strong>Yer:</strong> İstanbul Üniversitesi Avrasya Enstitüsü
+
+<img src="wp-content/uploads/2016/04/doganozlem-50yil-5mayis2016.jpg" width="700" />
+											</div><!-- .entry-content -->
+
+
+<table align="right" width="100%"><tr align="right"><td>18/04/2016</td><tr align="right"><td>2422 defa okundu</td></tr></tr></table></td></tr></table>
+<table align="left" width="30%" ><tr align="left"><br /><td>
+<a href="http://twitter.com/home?status=http%3A%2F%2Fedebiyat.istanbul.edu.tr%2Ffelsefe%2F%3Fp%3D6861%20Do%c4%9fan%20%c3%96zlem%20Sempozyumu%20(5%20May)" target="_blank"><img src="icon/tweet.png" width="18" height="18"></a> </td><td>
+<a href="http://www.facebook.com/share.php?u=http://edebiyat.istanbul.edu.tr/felsefe/?p=6861" target="_blank"><img src="icon/face.png" width="18" height="18"></a> </td><td>
+<a href=index8b8e.html?p=6861&amp;upm_export=doc target="_blank"><img src="icon/word.png" width="18" height="18"></a> </td><td>
+<a href=indexe9f5.html?p=6861&amp;upm_export=text target="_blank"><img src="icon/text.png" width="18" height="18"></a> </td><td>
+<a href=p%3d6861%26upm_export%3dprint.html target="_blank"><img src="icon/print.png" width="18" ></a> </td></tr></table>
+</div>
+<div class="cats-content" id="cats-content">
+<ul>
+
+<li><a href="index31f9.html?p=7494">&#8220;Kapı&#8221; Metaforu Üzerine (10 Nisan)</a></li>
+<li><a href="index3f61.html?p=7490">Doç. Dr. M. Ertan Kardeş (23 Mar)</a></li>
+<li><a href="index503b.html?p=7481">Dr. Öğr. Ü. Arzu İbişi Temelli (17 Mar)</a></li>
+<li><a href="indexa7d8.html?p=7470">Prof. Dr. Ayhan Bıçak (14 Mart)</a></li>
+<li><a href="index20d9.html?p=6436">Ders Programı</a></li>
+<li><a href="index6069.html?p=7430">Prof. Dr. Şafak Ural&#8217;a Saygı Toplantısı</a></li>
+<li><a href="indexe1cb.html?p=7427">Abdessamed Taibi</a></li>
+<li><a href="indexfd07.html?p=7422">İSEDER Atölyeleri</a></li>
+<li><a href="index68d8.html?p=7414">VII. Mantık Çalıştayı Kitabı yayımlandı</a></li>
+<li><a href="index9d09.html?p=7392">Dar Kapıdaki Mesih</a></li>
+</ul>
+<script language="javascript">setPage()</script>
+</div>
+<div class="clr"></div>
+</div>
+
+	
+<div class="clr"></div>
+<div class="unifoot">
+<div class="adres">İstanbul Üniversitesi  Edebiyat Fakültesi
+<p>Ordu Cad. No. 196, 34459 Laleli / İstanbul</p>
+<p>Tel: 0 (212) 440 00 00</p>
+
+</div>
+
+
+<div class="clr"></div>
+</div>
+<div class="clr"></div>
+<div class="footer">
+<span class="left">Her hakkı İstanbul Üniversitesi'ne aittir. Copyright 2011.</span>
+<div class="right">
+<ul>
+<li><a href="http://edebiyat.istanbul.edu.tr/felsefe">Site Haritası</a></li>
+<li><a href="index3d1a.html?p=5957">İletişim Bilgileri</a></li>
+<li><a href="https://www.facebook.com/iufelsefe" target="_blank">Facebook</a></li>
+<li><a href="https://twitter.com/iufelsefe" target="_blank" >Twitter</a></li>
+</ul>
+</div>
+</div>
+<div class="clr"></div>
+<!-- ngg_resource_manager_marker --><script type='text/javascript' src='wp-includes/js/comment-reply.minef15.js?ver=4.8'></script>
+<script type='text/javascript' src='wp-content/plugins/lightbox-plus/js/jquery.colorbox.1.5.9-min7fb9.js?ver=1.5.9'></script>
+<script type='text/javascript' src='wp-includes/js/wp-embed.minef15.js?ver=4.8'></script>
+<!-- Lightbox Plus Colorbox v2.7.2/1.5.9 - 2013.01.24 - Message: 0-->
+<script type="text/javascript">
+jQuery(document).ready(function($){
+  $("a[rel*=lightbox]").colorbox({speed:350,initialWidth:"300",initialHeight:"100",opacity:0.8,loop:false,scrolling:false,arrowKey:false,top:false,right:false,bottom:false,left:false});
+});
+</script>
+</body>
+
+<!-- Mirrored from edebiyat.istanbul.edu.tr/felsefe/?p=6861 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 22 Mar 2018 12:57:13 GMT -->
+</html>

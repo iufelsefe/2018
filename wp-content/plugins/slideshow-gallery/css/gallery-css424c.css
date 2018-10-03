@@ -1,0 +1,29 @@
+
+									
+#slideshow { list-style:none !important; color:#fff; }
+#slideshow span { display:none; }
+#slideshow-wrapper { position:relative; width:958px; background:#FFFFFF; padding-top:5px; border:0px none; margin:0; display:none; }
+#slideshow-wrapper * { margin:0; padding:0; }
+#fullsize { position:relative; z-index:1; overflow:hidden; width:956px; height:394px; border:1px #CCC solid; }
+#information { font-family:Helvetica, Arial, sans-serif !important; position:absolute; bottom:0px; width:958px; height:50px; background:#546e34; color:#fff; overflow:hidden; z-index:300; opacity:.90; filter:alpha(opacity=90); line-height:20px;}
+#information h3 { font-family:Helvetica, Arial, sans-serif !important; color:#fff; padding:15px 22px 3px; margin:0 !important; font-size:20px; font-weight:bold; }
+#information p { color:#fff; padding:0 22px 8px; margin:0 !important; font-size: 14px; font-weight:normal; }
+#image { width:958px; no-repeat; }
+#image img { position:absolute; border:none; width:auto; } 
+.imgnav { position:absolute; width:25%; height:408px; cursor:pointer; z-index:150; }
+#imgprev { left:0; background:url('') left center no-repeat; }
+#imgnext { right:0; background:url('') right center no-repeat; }
+#imglink { position:absolute; zoom:1; background-color:#ffffff; height:408px; width:50%; left:25%; right:20%; z-index:999; opacity:0; filter:alpha(opacity=0); }
+.linkhover { background:transparent url('../images/link.gif') center center no-repeat !important; text-indent:-9999px; opacity:.4 !important; filter:alpha(opacity=40) !important; }
+#thumbnails { background:#FFFFFF; }
+.thumbstop { margin-bottom:8px !important; }
+.thumbsbot { margin-top:8px !important; }
+#slideleft { float:left; width:20px; height:20px; margin-top:0px;background:url('../images/scroll-left.gif') center center no-repeat; background-color:#ffcc00; }
+#slideleft:hover { background-color:#ccc; }
+#slideright { float:right; width:20px; height:20px; margin-top:0px;background:#ffcc00 url('../images/scroll-right.gif') center center no-repeat; }
+#slideright:hover { background-color:#ccc; }
+#slidearea { float:left; background:#FFFFFF; position:relative; width:907px; margin-left:5px; height:81px; overflow:hidden; }
+#slider { position:absolute; left:0; height:81px; }
+#slider img { cursor:pointer; border:1px solid #666; padding:2px; -moz-border-radius:4px; -webkit-border-radius:4px; float:left !important; }
+#spinner { position:relative; top:50%; left:45%; }	
+#spinner img {border:none;}

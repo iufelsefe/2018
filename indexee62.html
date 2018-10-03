@@ -1,0 +1,622 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from edebiyat.istanbul.edu.tr/felsefe/?p=6592 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 22 Mar 2018 12:52:20 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" >
+        <!--[if IE 9]>
+        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" >
+        <![endif]-->
+        <!--[if IE 8]>
+        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" >
+        <![endif]-->
+        <!--[if IE 7]>
+        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" >
+        <![endif]-->
+<meta NAME="keywords" CONTENT="İstanbul Üniversitesi, Istanbul University, Eğitim, Education, Akademik, Academy, İstanbul, Istanbul, University, Üniversite, Student, Öğrenci, Turkey">
+<meta NAME="description" CONTENT="İstanbul Üniversitesi | Tarihten Geleceğe Bilim Köprüsü - 1453">
+<meta NAME="author" CONTENT="İstanbul Üniversitesi Bilgi İşlem Daire Başkanlığı">
+<meta name="google-site-verification" content="KIn8WeplSWedUUx5vVZiVnhacrOHkCLWuQPvp0Ags_I" />
+<META NAME="googlebot" CONTENT="index, follow">
+<META NAME="robots" CONTENT="index, follow">
+<meta name="robots" content="all">
+<meta name="revisit-after" content="1 Days">
+<title>Yaz Dönemi için Okuma Listesi | İstanbul Üniversitesi Edebiyat Fakültesi</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="stylesheet" type="text/css" media="all" href="wp-content/themes/1453/style.css" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+<script type="text/javascript" src="highlight.js"></script>
+<script src="http://edebiyat.istanbul.edu.tr/wp-content/plugins/wp-spry-menu/SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
+<script type="text/javascript" src="jquery.scrollTo.js"></script>
+<script src="jcarousellite_1.0.1c4_new.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function() {
+	$(".duyuru-wrapper").jCarouselLite({
+		horizontal: true,
+		hoverPause: true,
+		btnPrev: ".back",
+		btnNext: ".next",
+		visible: 1,
+		auto:10000,
+		speed:500
+	});
+});
+</script>
+<script>
+
+$(document).ready(function() {
+
+	//Speed of the slideshow
+	var speed = 5000;
+	
+	//You have to specify width and height in #slider CSS properties
+	//After that, the following script will set the width and height accordingly
+	$('#mask-gallery, #gallery li').width($('#slider').width());	
+	$('#gallery').width($('#slider').width() * $('#gallery li').length);
+	$('#mask-gallery, #gallery li, #mask-excerpt, #excerpt li').height($('#slider').height());
+	
+	//Assign a timer, so it will run periodically
+	var run = setInterval('newsscoller(0)', speed);	
+	
+	$('#gallery li:first, #excerpt li:first').addClass('selected');
+
+	//Pause the slidershow with clearInterval
+	$('#btn-pause').click(function () {
+		clearInterval(run);
+		return false;
+	});
+
+	//Continue the slideshow with setInterval
+	$('#btn-play').click(function () {
+		run = setInterval('newsscoller(0)', speed);	
+		return false;
+	});
+	
+	//Next Slide by calling the function
+	$('#btn-next').click(function () {
+		newsscoller(0);	
+		return false;
+	});	
+
+	//Previous slide by passing prev=1
+	$('#btn-prev').click(function () {
+		newsscoller(1);	
+		return false;
+	});	
+	
+	//Mouse over, pause it, on mouse out, resume the slider show
+	$('#slider').hover(
+	
+		function() {
+			clearInterval(run);
+		}, 
+		function() {
+			run = setInterval('newsscoller(0)', speed);	
+		}
+	); 	
+	
+});
+
+
+function newsscoller(prev) {
+
+	//Get the current selected item (with selected class), if none was found, get the first item
+	var current_image = $('#gallery li.selected').length ? $('#gallery li.selected') : $('#gallery li:first');
+	var current_excerpt = $('#excerpt li.selected').length ? $('#excerpt li.selected') : $('#excerpt li:first');
+
+	//if prev is set to 1 (previous item)
+	if (prev) {
+		
+		//Get previous sibling
+		var next_image = (current_image.prev().length) ? current_image.prev() : $('#gallery li:last');
+		var next_excerpt = (current_excerpt.prev().length) ? current_excerpt.prev() : $('#excerpt li:last');
+	
+	//if prev is set to 0 (next item)
+	} else {
+		
+		//Get next sibling
+		var next_image = (current_image.next().length) ? current_image.next() : $('#gallery li:first');
+		var next_excerpt = (current_excerpt.next().length) ? current_excerpt.next() : $('#excerpt li:first');
+	}
+
+	//clear the selected class
+	$('#excerpt li, #gallery li').removeClass('selected');
+	
+	//reassign the selected class to current items
+	next_image.addClass('selected');
+	next_excerpt.addClass('selected');
+
+	//Scroll the items
+	$('#mask-gallery').scrollTo(next_image, 800);		
+	$('#mask-excerpt').scrollTo(next_excerpt, 800);					
+	
+}
+
+
+
+</script>
+<script type="text/javascript">
+$(function() {
+$(".img-four ul li:last-child").addClass("son");
+});
+</script>
+
+<link rel="pingback" href="xmlrpc.php" />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link rel="alternate" type="application/rss+xml" title="İstanbul Üniversitesi Edebiyat Fakültesi &raquo; beslemesi" href="indexd784.html?feed=rss2" />
+<link rel="alternate" type="application/rss+xml" title="İstanbul Üniversitesi Edebiyat Fakültesi &raquo; yorum beslemesi" href="indexa6da.html?feed=comments-rss2" />
+<link rel="alternate" type="application/rss+xml" title="İstanbul Üniversitesi Edebiyat Fakültesi &raquo; Yaz Dönemi için Okuma Listesi yorum beslemesi" href="index3e02.html?feed=rss2&amp;p=6592" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/edebiyat.istanbul.edu.tr\/felsefe\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.8"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,56826,8203,55356,56819),0,0),c=j.toDataURL(),b===c&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55358,56794,8205,9794,65039),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55358,56794,8203,9794,65039),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<style type="text/css">
+	.wp-pagenavi{margin-left:auto !important; margin-right:auto; !important}
+	</style>
+  <link rel='stylesheet' id='slideshow-gallery-css'  href='wp-content/plugins/slideshow-gallery/css/gallery-css424c.css?1=1&amp;resizeimages=N&amp;width=964&amp;height=400&amp;border=0px+none&amp;background=%23FFFFFF&amp;infobackground=%23546e34&amp;infocolor=%23fff&amp;ver=1.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='gtranslate-style-css'  href='wp-content/plugins/gtranslate/gtranslate-style16ef15.css?ver=4.8' type='text/css' media='all' />
+<link rel='stylesheet' id='tablepress-default-css'  href='wp-content/plugins/tablepress/css/default.min4b1d.css?ver=1.8' type='text/css' media='all' />
+<link rel='stylesheet' id='easytabs-css'  href='wp-content/plugins/wordpress-tabs-slides/easytabs/css/easy-responsive-tabsb95e.css?ver=2.0.3' type='text/css' media='all' />
+<link rel='stylesheet' id='tabs-slides-css'  href='wp-content/plugins/wordpress-tabs-slides/style/greenb95e.css?ver=2.0.3' type='text/css' media='all' />
+<link rel='stylesheet' id='tabs-slides-hacks-css'  href='wp-content/plugins/wordpress-tabs-slides/hacksb95e.css?ver=2.0.3' type='text/css' media='all' />
+<link rel='stylesheet' id='lightboxStyle-css'  href='wp-content/plugins/lightbox-plus/css/framed/colorbox.mineed8.css?ver=2.7.2' type='text/css' media='screen' />
+<link rel='stylesheet' id='wp-pagenavi-style-css'  href='wp-content/plugins/wp-pagenavi-style/css/css3_yellow_glossy5152.css?ver=1.0' type='text/css' media='all' />
+<script type='text/javascript' src='wp-includes/js/jquery/jqueryb8ff.js?ver=1.12.4'></script>
+<script type='text/javascript' src='wp-includes/js/jquery/jquery-migrate.min330a.js?ver=1.4.1'></script>
+<script type='text/javascript' src='wp-content/plugins/slideshow-gallery/js/gallery5152.js?ver=1.0'></script>
+<script type='text/javascript' src='wp-content/plugins/rbl-navigator/js/rbl-navigator84e2.js?ver=1.00'></script>
+<script type='text/javascript' src='wp-content/plugins/gtranslate/jquery-translateef15.js?ver=4.8'></script>
+<script type='text/javascript' src='wp-content/plugins/wordpress-tabs-slides/ts/tabs_slidesb95e.js?ver=2.0.3'></script>
+<script type='text/javascript' src='wp-content/plugins/wordpress-tabs-slides/ts/tabs_slides_opt_loaderb95e.js?ver=2.0.3'></script>
+<script type='text/javascript' src='wp-content/plugins/wordpress-tabs-slides/easytabs/js/easyResponsiveTabsb95e.js?ver=2.0.3'></script>
+<link rel='https://api.w.org/' href='index52f0.html?rest_route=/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Lisansüstü Mülakatları (23 Haziran)' href='index0f0a.html?p=6585' />
+<link rel='next' title='Yeni Kayıtlar e-Devlet Üzerinden' href='indexc6b1.html?p=6621' />
+<meta name="generator" content="WordPress 4.8" />
+<link rel="canonical" href="indexee62.html?p=6592" />
+<link rel='shortlink' href='indexee62.html?p=6592' />
+<link rel="alternate" type="application/json+oembed" href="index7a51.html?rest_route=%2Foembed%2F1.0%2Fembed&amp;url=http%3A%2F%2Fedebiyat.istanbul.edu.tr%2Ffelsefe%2F%3Fp%3D6592" />
+<link rel="alternate" type="text/xml+oembed" href="index8289.html?rest_route=%2Foembed%2F1.0%2Fembed&amp;url=http%3A%2F%2Fedebiyat.istanbul.edu.tr%2Ffelsefe%2F%3Fp%3D6592&amp;format=xml" />
+<!-- <meta name="NextGEN" version="2.1.50" /> -->
+<link rel="stylesheet" href="wp-content/plugins/rbl-navigator/css/rbl-navigator.css" type="text/css" media="screen, projection" />        
+        <script type="text/javascript">
+        var tb_pathToImage = "wp-includes/js/thickbox/loadingAnimation.gif";
+		var tb_closeImage = "wp-includes/js/thickbox/tb-close.html";
+		</script>
+        
+        	<style type="text/css">
+	 .wp-pagenavi
+	{
+		font-size:12px !important;
+	}
+	</style>
+	
+<link href="wp-content/plugins/wp-spry-menu/SpryAssets/global.css" type="text/css" rel="stylesheet" />
+
+<script src="wp-content/plugins/wp-spry-menu/SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
+<link href="wp-content/plugins/wp-spry-menu/themes/silver/style.css" type="text/css" rel="stylesheet" /><!-- Vipers Video Quicktags v6.6.0 | http://www.viper007bond.com/wordpress-plugins/vipers-video-quicktags/ -->
+<style type="text/css">
+.vvqbox { display: block; max-width: 100%; visibility: visible !important; margin: 10px auto; } .vvqbox img { max-width: 100%; height: 100%; } .vvqbox object { max-width: 100%; } 
+</style>
+<script type="text/javascript">
+// <![CDATA[
+	var vvqflashvars = {};
+	var vvqparams = { wmode: "opaque", allowfullscreen: "true", allowscriptaccess: "always" };
+	var vvqattributes = {};
+	var vvqexpressinstall = "wp-content/plugins/vipers-video-quicktags/resources/expressinstall.swf";
+// ]]>
+</script>
+	<style type="text/css">
+	.wp-pagenavi{margin-left:auto !important; margin-right:auto; !important}
+	</style>
+  </head>
+
+<body class="post-template-default single single-post postid-6592 single-format-standard">
+<div id="wrapper">
+<div class="header">
+<div id="topmenu">
+<div class="menu-topmenu-container"><ul id="wp_spry_menu" class="MenuBarHorizontal MenuBarActive"><li id="menu-item-5888" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-has-children menu-item-5888"><a href="http://edebiyat.istanbul.edu.tr/felsefe">Ana Sayfa</a>
+<ul  class="sub-menu">
+	<li id="menu-item-5889" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5889"><a href="http://www.istanbul.edu.tr/">İstanbul Üniversitesi Ana Sayfa</a></li>
+	<li id="menu-item-5890" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5890"><a href="http://edebiyat.istanbul.edu.tr/">Edebiyat Fakültesi Ana Sayfası</a></li>
+</ul>
+</li>
+<li id="menu-item-2433" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2433"><a href="#">Hakkımızda</a>
+<ul  class="sub-menu">
+	<li id="menu-item-6455" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6455"><a href="indexc781.html?p=6444">Bölüm Tarihçesi</a></li>
+	<li id="menu-item-7344" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7344"><a href="index8bab.html?p=7339">Bölüm Tanıtım Sunumu</a></li>
+</ul>
+</li>
+<li id="menu-item-6465" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-6465"><a href="#">Akademik</a>
+<ul  class="sub-menu">
+	<li id="menu-item-6553" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6553"><a href="http://aves.istanbul.edu.tr/abicak/">Bölüm Başkanı: Prof. Dr. Ayhan Bıçak</a></li>
+	<li id="menu-item-6466" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-6466"><a href="index6a2d.html?p=6462">Anabilim Dalları</a>
+	<ul  class="sub-menu">
+		<li id="menu-item-6476" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6476"><a href="index4860.html?p=6468">Felsefe Tarihi Anabilim Dalı</a></li>
+		<li id="menu-item-6477" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6477"><a href="index51f5.html?p=6470">Mantık Anabilim Dalı</a></li>
+		<li id="menu-item-6478" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6478"><a href="index1579.html?p=6472">Sistematik Felsefe Anabilim Dalı</a></li>
+		<li id="menu-item-6479" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6479"><a href="indexa36c.html?p=6474">Türk-İslam Düşüncesi Tarihi Anabilim Dalı</a></li>
+	</ul>
+</li>
+	<li id="menu-item-6484" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6484"><a href="index5388.html?p=6374">Akademik Kadro</a></li>
+</ul>
+</li>
+<li id="menu-item-6063" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-6063"><a href="#">Öğrenci</a>
+<ul  class="sub-menu">
+	<li id="menu-item-6964" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6964"><a href="index20d9.html?p=6436">Ders Programı</a></li>
+	<li id="menu-item-6458" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6458"><a href="http://ogrenci.istanbul.edu.tr/?cat=560">Akademik Takvim</a></li>
+	<li id="menu-item-6965" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6965"><a href="index9b13.html?p=6612">Doktora Yeterlilik Kriterleri</a></li>
+	<li id="menu-item-5955" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5955"><a href="http://aksis.istanbul.edu.tr/">Öğrenci Otomasyon Sistemi</a></li>
+	<li id="menu-item-6221" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6221"><a href="http://eogren.istanbul.edu.tr/">E-Öğren (Ortak Dersler)</a></li>
+	<li id="menu-item-6201" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6201"><a href="http://erasmus.istanbul.edu.tr/">ERASMUS Programı</a></li>
+	<li id="menu-item-6457" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6457"><a href="http://erasmusprogram.istanbul.edu.tr/Students/uaikagreements.aspx">ERASMUS Anlaşma Sorgulama</a></li>
+	<li id="menu-item-6200" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6200"><a href="http://farabi.istanbul.edu.tr/">FARABİ Programı</a></li>
+	<li id="menu-item-6460" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6460"><a href="http://mevlana.istanbul.edu.tr/">MEVLANA Programı</a></li>
+	<li id="menu-item-6459" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6459"><a href="http://edebiyat.istanbul.edu.tr/?p=8200">Felsefe Topluluğu</a></li>
+</ul>
+</li>
+<li id="menu-item-6338" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-6338"><a href="#">Bilgi İşlem</a>
+<ul  class="sub-menu">
+	<li id="menu-item-6339" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6339"><a href="http://bilgiislem.istanbul.edu.tr/">Bilgi İşlem Daire Bşk.</a></li>
+	<li id="menu-item-6340" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6340"><a href="http://mail.istanbul.edu.tr/">Personel E-Posta</a></li>
+	<li id="menu-item-6341" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6341"><a href="http://ogr.iu.edu.tr/">Öğrenci E-Posta</a></li>
+	<li id="menu-item-6342" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6342"><a href="http://bilgiislem.istanbul.edu.tr/?p=282">Eduroam Kablosuz İnternet</a></li>
+</ul>
+</li>
+<li id="menu-item-5959" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5959"><a href="index1020.html?p=6554">İletişim</a></li>
+</ul></div><script type="text/javascript">
+<!--
+var wp_spry_menu = new Spry.Widget.MenuBar("wp_spry_menu");
+//-->
+</script>
+</div>
+<div class="clr"></div>
+
+<div class="logobar">
+<h1><a href="http://edebiyat.istanbul.edu.tr/felsefe">İstanbul Üniversitesi</a></h1>
+<div class="logobar-right">
+<div class="logo-menu"><div class="menu-logomenu-container"><ul id="logo-menu" class="logo-menu"><li id="menu-item-6204" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6204"><a href="#">Sıkça Sorulan Sorular</a></li>
+</ul></div></div>
+</div>
+<div class="clr"></div>
+</div>
+<div class="clr"></div>
+<div class="searchbar">
+<div class="sosyal">
+<a class="fb" href="https://www.facebook.com/iufelsefe" target="_blank"></a>
+<a class="twitter" href="https://twitter.com/iufelsefe" target="_blank"></a>
+<a class="youtube" href="https://www.youtube.com/channel/UCWc65LqYU2krXgugQFey7BA"></a>
+<a class="rss" href="indexd784.html?feed=rss2"></a>
+</div><div class="arama">
+<form method="get" id="searchform" action="http://edebiyat.istanbul.edu.tr/felsefe">
+<input type="text" onblur="if(this.value == '') { this.value='Arama'; }" onfocus="if(this.value == 'Arama') { this.value=''; }" value="Arama" name="s" id="s"/>
+<input type="submit" id="searchsubmit" value=""/>
+</form>
+</div></div>
+<div class="clr"></div>
+</div>
+
+
+
+<div class="content">
+<h2>Yaz Dönemi için Okuma Listesi</h2>
+
+<div class="post">
+
+
+					<div class="entry-content">
+						<img class="size-full wp-image-6593 alignnone" src="wp-content/uploads/2015/07/url.jpg" alt="url" width="500" height="333" />
+
+<strong>Temel Felsefe Metinleri</strong>
+<ul>
+	<li>Homeros: İlyada</li>
+	<li>Homeros: Odysseia</li>
+	<li>Heseidos: İşler ve Günler</li>
+	<li>Heseidos: Theogonia</li>
+	<li>W. Kranz: Antik Felsefe</li>
+	<li>Diogenes Laertios: Ünlü Filozofların Yaşamları ve Öğretileri</li>
+	<li>Platon: Sokrates’in Savunması</li>
+	<li>Platon:  Devlet</li>
+	<li>Platon: Sofist</li>
+	<li>Platon: Parmenides</li>
+	<li>Platon: Phaidon</li>
+	<li>Platon: Kratylos</li>
+	<li>Platon: Menon</li>
+	<li>Platon: Yasalar</li>
+	<li>Aristoteles: Metafizik</li>
+	<li>Aristoteles: Nikamakahos’a Etik</li>
+	<li>Aristoteles: Politika</li>
+	<li>Aristoteles: Ruh Üstüne</li>
+	<li>Aristoteles: Kategoriler</li>
+	<li>Aristoteles: Poetika</li>
+	<li>Epiktetos: Düşünceler ve Konuşmalar</li>
+	<li>Cicero: Yaşlılık</li>
+	<li>Cicero: Dostluk</li>
+	<li>Porphius: İsagoge</li>
+	<li>Descartes: Yöntem Üzerine Konuşma</li>
+	<li>Descartes: Aklın İdaresi  İçin Kurallar</li>
+	<li>Descartes: Metafizik Düşünceler</li>
+	<li>Descartes: Felsefenin İlkeleri</li>
+	<li>Leibniz: Monadoloji</li>
+	<li>Leibniz: Metafizik Düşünceler</li>
+	<li>Spinoza: Ethica</li>
+	<li>Spinoza: Teolojik Politik İnceleme</li>
+	<li>Locke: İnsan Anlığı Üzerine Bir Deneme</li>
+	<li>Hume: İnsan Doğası Üzerine Bir İnceleme</li>
+	<li>Hume: İnsanın Anlama Yetisi Üzerine Bir Soruşturma</li>
+	<li>Berkeley: İnsan Bilgisinin İlkeleri</li>
+	<li>Rousseau: Toplum Sözleşmesi</li>
+	<li>Diderot: Söyleşiler</li>
+	<li>La Mettrie: Makine İnsan</li>
+	<li>Condillac: Duyum Üzerine İnceleme</li>
+	<li>Bacon: Novum Organum</li>
+	<li>Kant: Prolegomena</li>
+	<li>Kant: Seçme Yazılar</li>
+	<li>Kant: Arı Usun Eleştirisi</li>
+	<li>Kant:  Pratik Aklın Eleştirisi</li>
+	<li>Kant: Ahlak Metafiziğin Temellendirilmesi</li>
+	<li>Kant: Yargı Yetisinin Eleştirisi</li>
+	<li>Hegel: Tarihte Akıl</li>
+	<li>Hegel: Tinin Görüngübilimi</li>
+	<li>Hegel: Hukuk Felsefesinin İlkeleri</li>
+	<li>Hegel: Mantık Bilimi</li>
+	<li>Marks: Alman İdeolojisi</li>
+	<li>Schopenhauer: Güzelin Metafiziği</li>
+	<li>Schopenhauer: İdeal ve Gerçek</li>
+	<li>Schopenhauer: Hayatın Anlamı</li>
+	<li>Kirkergaard:  Korku ve Titreme</li>
+	<li>Kirkergaard: Kaygı Kavramı</li>
+	<li>Nietzsche: Ahlakın Soykütüğü</li>
+	<li>Nietzsche: Böyle Buyurdu Zerdüşt</li>
+	<li>Nietzsche: Ecco Homo</li>
+	<li>Nietzsche: Yunanlıların Trajik Çağında Felsefe</li>
+	<li>Dilthey: Tin Bilimlerine Giriş</li>
+	<li>Frege: Aritmetiğin Temelleri</li>
+	<li>Russell: Felsefe Sorunları</li>
+	<li>Russell: Mantıksal Atomculuk Felsefesi</li>
+	<li>Russell: Dış Dünya Üzerine Bilgimiz</li>
+	<li>Wittgenstein: Tractatus Logico Philosophicus</li>
+	<li>Wittgenstein: Felsefi Soruşturmalar</li>
+	<li>Wittgenstein: Defterler</li>
+	<li>Wittgenstein: Renkler Üzerine Notlar</li>
+	<li>Ayer: Dil Doğruluk Mantık</li>
+	<li>Husserl: Kesin Bilim Olarak Felsefe</li>
+	<li>Husserl: Fenomenoloji Üzerine Beş Ders</li>
+	<li>Heidegger: Varlık ve Zaman</li>
+	<li>Heidegger: Metafizik Nedir?</li>
+	<li>Sartre: Bulantı</li>
+	<li>Sartre: Varlık ve Hiçlik</li>
+	<li>Jaspers: Felsefeye Giriş</li>
+	<li>Jaspers: Felsefe Nedir?</li>
+	<li>Camus: Başkaldıran İnsan</li>
+	<li>Camus: Yabancı</li>
+</ul>
+<strong>Şiir &amp; Peotika</strong>
+<ul>
+	<li>Turgut Uyar: Dünyanın En Güzel Arabistanı</li>
+	<li>Turgut Uyar: Bir Şiirden</li>
+	<li>Şeyh Galip: Hüsnü ü Aşk</li>
+	<li>İlhan Berk: Logos</li>
+	<li>İlhan Berk: Poetika</li>
+	<li>Tzvetan Todorov: Poetikaya Giriş</li>
+	<li>Hilmi Yavuz: Edebiyat ve Sanat Üzerine Yazılar</li>
+	<li>İsmet Özel: Şiir Okuma Kılavuzu</li>
+	<li>Metin Altıok: Bir Acıya Kiracı</li>
+	<li>Melisa Gürpınar: Küçük Şeyler</li>
+	<li>Başo (Matsuo Kinsaku): Kelebek Düşleri</li>
+	<li>Derya Önder: Akasya Telaşı</li>
+	<li>Özge Dirik: Nokta Durağı</li>
+	<li>Mehmet Erte: Suyu Bulandıran Şey</li>
+	<li>Metin Cengiz: Felsefe ve Şiir</li>
+	<li>Mustafa Köz: Açık Yara</li>
+	<li>Salih Aydemir: (h)içlenmeler</li>
+	<li>Bedirhan Toprak: Gece Dili</li>
+</ul>
+<strong>Edebiyat</strong>
+<ul>
+	<li>Sabahattin Ali: İçimizdeki Şeytan</li>
+	<li>Amin Maalouf: Yüzüncü Ad</li>
+	<li>Dostoyevski: Suç ve Ceza</li>
+	<li>Dostoyevski: Budala</li>
+	<li>Dostoyevski: Karamazov Kardeşler</li>
+	<li>A. Camus: Yabancı</li>
+	<li>Turgenyev: Babalar ve Oğullar</li>
+	<li>Szpilman: Piyanist</li>
+	<li>Umberto Eco: Gülün Adı
+Franz Kafka: Dava</li>
+	<li>Franz Kafka: Dönüşüm</li>
+	<li>A. H. Tanpınar: Saatleri Ayarlama Enstitüsü</li>
+	<li>A. H. Tanpınar: Huzur</li>
+	<li>Oguz Atay: Tutunamayanlar</li>
+	<li>İ. Oktay Anar: Puslu Kıtalar Atlası</li>
+	<li>J. Saramago: Kabil</li>
+	<li>H.Hesse: Siddharta</li>
+	<li>Halikarnas Balıkçısı: Mavi Sürgün</li>
+	<li>Irvin Yalom: Spinoza Problemi</li>
+	<li>Maksim Gorki: Ana</li>
+</ul>
+<strong>Kültür Tarihi</strong>
+<ul>
+	<li>N. Kramer: Tarih Sümer’de Başlar</li>
+	<li>N. Kramer: Sümer Mitolojisi</li>
+	<li>E. Hornung: Mısır Tarihi</li>
+	<li>Konfüçyüs: Konuşmalar</li>
+	<li>W. Eberdhard: Çin Tarihi</li>
+	<li>Valmiki: Ramayana</li>
+	<li>Harodotos: Herodotos Tarihi</li>
+	<li>Yusuf Has Hacip: Kutadgu Bilig</li>
+	<li>Firdevsi: Şahname</li>
+	<li>B. Malinowski: Büyü, Bilim ve Din</li>
+	<li>C. Levi-Strauss: Yaban Düşünce</li>
+	<li>Rut Benedict: Krizantem ve Kılıç</li>
+	<li>N. Ferguson: İmparatorluk Britanya’nın Modern Dünyayı Biçimlendirişi</li>
+	<li>P. Clastres: Vahşi Savaşçının Mutsuzluğu</li>
+	<li>A. Waliki: Rus Düşünce Tarihi</li>
+	<li>G.Childe: Kendini Yaratan İnsan</li>
+	<li>J. Diamond: Tüfek, Mikrop ve Celik</li>
+	<li>E. Scheurmann: Göğü Delen Adam</li>
+	<li>Gordon Childe: Tarihte Neler Oldu</li>
+	<li>Alaaddin Şenel: İlkel Toplumdan Uygar Topluma Geçiş</li>
+	<li>B. Malinowski: İnsan ve Kültür</li>
+	<li>Morgan: Eski Toplum</li>
+	<li>R. Leakey: İnsanın Kökeni</li>
+	<li>Gılgamış Destanı</li>
+	<li>Thomas Clearly: Konfüçyüs Düşüncesinin Temelleri</li>
+</ul>
+<strong>İslam Düşüncesi
+</strong>
+<ul>
+	<li>Adamson, Peter, Richard C. Taylor (ed.), İslam Felsefesine Giriş, çev. M. Cüneyt Kaya, İstanbul: Küre, 2007.</li>
+	<li>Alper, Ö. Mahir, Varlık ve insan: Kemalpaşazade bağlamında bir tasavvurun yeniden inşası, İstanbul: Klasik, 2010.</li>
+	<li>Altaş, Eşref, Fahreddin er-Razi’nin İbn Sina Yorumu ve Eleştirisi, İstanbul: İz Yayıncılık, 200</li>
+	<li>Câbirî, Muhammed Âbid, Arap-İslâm Kültürünün Akıl Yapısı; Arap-İslâm Kültüründeki Bilgi Sistemlerinin Eleştirel Bir Analizi, trc. Burhan Köroğlu, Hasan Hacak, Ekrem Demirli, İstanbul: Kitabevi 2001.</li>
+	<li>Câbirî, Muhammed Âbid, Felsefî Mirasımız ve Biz, trc. A. Said Aykut, İstanbul: Kitabevi 2003.</li>
+	<li>Câbirî, Muhammed Âbid, Arap-İslam Aklının Oluşumu, trc. İbrahim Akbaba, İstanbul: Kitabevi 2001.</li>
+	<li>Demirli, Ekrem, İslam Metafiziğinde Tanrı ve İnsan: İbnü’l Arabi ve Vahdet-i Vücud Geleneği, İstanbul: Kabalcı Yayınevi, 2009.</li>
+	<li>Griffel, Frank, Gazali’nin Felsefi Kelamı, çev. İbrahim Halil Üçer, Muhammed Fatih Kılıç, İstanbul: Klasik, 2012.</li>
+	<li>Gutas, Dimitri, İbn Sina’nın Mirası, derleme ve çev. M. Cüneyt Kaya, İstanbul: Klasik, 2004. (Seçme)</li>
+	<li>Gutas, Dimitri Yunanca Düşünce Arapça Kültür: Bağdat’ta Yunanca-Arapça Çeviri Hareketi ve Erken Abbasi Toplumu, çev. Lütfü Şimşek, İstanbul: Kitap Yayınevi, 2003.</li>
+	<li>İzutsu, Toshihiko, İslam’da Varlık Düşüncesi, trc. İbrahim Kalın, İstanbul: İnsan Yayınları, 1995.</li>
+	<li>Kara, İsmail, Bir Felsefe Dili Kurmak: Modern Felsefe Bilim Terimlerinin Türkçeye Girişi, İstanbul: Dergay Yayınları, 2008.</li>
+	<li>Kara, İsmail, Dinle Modernleşme Arasında Çağdaş Türk Düşüncesinin Meseleleri, İstanbul: Dergay Yayınları, 2013.</li>
+	<li>Kaya, Mahmut, İslam Filozoflarından Felsefe Metinleri, İstanbul: Klasik, 2007.</li>
+	<li>Kaya, M. Cüneyt, Varlık ve İmkân : -Aristoteles’ten İbn Sînâ’ya İmkânın Tarihi-, İstanbul: Klasik, 2011.</li>
+	<li>Kaya, M. Cüneyt, yayına hazırlayan, Gazzali Konuşmaları, İstanbul: Küre Yayınları, 2012.</li>
+	<li>Kaya, M. Cüneyt, editör, İslam Felsefesi- Tarih ve Problemler, İstanbul: İSAM Yayınları, 2013.</li>
+	<li>Kutluer, İlhan, İslamın Klasik Çağında Felsefe Tasavvuru, İstanbul: İz 1996.</li>
+	<li>Makdîsî, George, “Ortaçağ’da Yüksek Öğretim-İslâm Dünyası ve Hristiyan Batı” çev. A. H. Çavuşoğlu- H. T. Başoğlu, İstanbul: Gelenek 2004.</li>
+	<li>Özturan, Hümeyra, Akıl ve Ahlak: Aristoteles ve Farabi’de Ahlakın Kaynağı, İstanbul: Klasik, 2013.</li>
+	<li>Peterson, Michael, William Hasker, Bruce Reichenbach, David Basinger, Akıl ve İnanç: Din Felsefesine Giriş, çev. Rahim Acar, İstanbul: Küre Yayınları, 2006.</li>
+	<li>Sarıoğlu Hüseyin, İbn Rüşd Felsefesi, Klasik, İstanbul 2003.</li>
+	<li>Toktaş Fatih, İslam Düşüncesinde Felsefe Eleştirileri, İstanbul: Klasik Yayınları, 2004.</li>
+	<li>Tony Street, İslam Mantık Tarihi, İstanbul : Klasik Yayınları, 2013.</li>
+	<li>Türker, Ömer, İbn Sina Felsefesinde Metafizik Bilginin Imkanı Sorunu, İstanbul: Türkiye Diyanet Vakfı İslam Araştırmaları Merkezi (İSAM), 2010.</li>
+	<li>Türker, Ömer, Osman Demir, editör, İslam Düşüncesinin Dönüşüm Çağında Fahreddin er-Razi, İstanbul: İSAM Yayınları, 2013. (Seçme)</li>
+	<li>Vural, Mehmet, İslam Felsefesinin Özgünlüğü, ed., Ankara: Elis Yayınları, 2009. (Seçme)</li>
+	<li>Wisnovsky, Robert, İbn Sina Metafiziği, çev. İbrahim Halil Üçer, İstanbul: Klasik, 2010.</li>
+</ul>
+<strong> Politik Felsefe</strong>
+<ul>
+	<li>Thomas Hobbes: Leviathan</li>
+	<li>Niccolò Machiavelli: Prens</li>
+	<li>Jean-Jacques Rousseau: Toplumsal Sözleşme Üzerine ya da Politik Hukukun İlkeleri</li>
+	<li>Platon: Politeia (Devlet), Yasalar</li>
+	<li>Aristoteles: Nicomakhos’a Etik</li>
+	<li>İbn-i Haldun: Mukaddime</li>
+	<li>Augustinus: De Civitate Dei</li>
+	<li>Cicero: De Re Publica</li>
+	<li>Etienne de la Boétie: Gönüllü Kulluk Üzerine Söylev</li>
+	<li>John Locke: Yönetim Üzerine İki İnceleme</li>
+	<li>Montesquieu: Yasaların Ruhu Üzerine</li>
+	<li>I. Kant: “Kozmopolitik açıdan Evrensel bir Tarih Düşüncesi”, “Sürekli barış üzerine”</li>
+	<li>Hegel: Hukuk Felsefesinin İlkeleri, Zihnin Fenomenolojisi</li>
+	<li>Karl Marx: 44 Elyazmaları</li>
+	<li>Sieyès: Üçüncü Tabaka Nedir?</li>
+	<li>Fichte: Alman Ulusuna Söylev</li>
+	<li>John Stuart Mill: Özgürlük Üzerine</li>
+	<li>Thomas Paine: İnsan Hakları</li>
+	<li>Walter Benjamin: “Tarih Kavramı Üzerine”</li>
+	<li>John Rawls: Adalet Teorisi</li>
+	<li>J. Habermas: Kamusallığın Yapısal Dönüşümü</li>
+	<li>Carl Schmitt: Politik-olan Kavramı</li>
+	<li>Alexis de Tocqueville: Amerika’da Demokrasi</li>
+	<li>Leo Strauss: Doğal Hak ve Tarih</li>
+	<li>Jean Bodin: Cumhuriyetin Altı Kitabı</li>
+	<li>Baruch Spinoza: Ethica, Politik İnceleme</li>
+	<li>Hannah Arendt: İnsanlık Koşulu</li>
+	<li>Pierre Bourdieu: Ayrım</li>
+	<li>Michel Foucault: Toplumu Savunmak Gerekir</li>
+	<li>Giorgio Agamben: Homo Sacer</li>
+	<li>Antonio Negri: İmparatorluk</li>
+	<li>Benjamin Constant: “Modernlerin özgürlüğüne kıyasla eskilerin özgürlüğü üzerine”</li>
+	<li>Max Weber: Meslek olarak Politika</li>
+	<li>L. Wittgenstein: Defterler</li>
+	<li>İnsan Hakları Beyannâmeleri</li>
+	<li>Alain Badiou: Felsefe ile Politika arasındaki Gizemli İlişki</li>
+</ul>
+											</div><!-- .entry-content -->
+
+
+<table align="right" width="100%"><tr align="right"><td>16/07/2015</td><tr align="right"><td>30539 defa okundu</td></tr></tr></table></td></tr></table>
+<table align="left" width="30%" ><tr align="left"><br /><td>
+<a href="http://twitter.com/home?status=http%3A%2F%2Fedebiyat.istanbul.edu.tr%2Ffelsefe%2F%3Fp%3D6592%20Yaz%20D%c3%b6nemi%20i%c3%a7in%20Okuma%20Listesi" target="_blank"><img src="icon/tweet.png" width="18" height="18"></a> </td><td>
+<a href="http://www.facebook.com/share.php?u=http://edebiyat.istanbul.edu.tr/felsefe/?p=6592" target="_blank"><img src="icon/face.png" width="18" height="18"></a> </td><td>
+<a href=indexe963.html?p=6592&amp;upm_export=doc target="_blank"><img src="icon/word.png" width="18" height="18"></a> </td><td>
+<a href=index175c.html?p=6592&amp;upm_export=text target="_blank"><img src="icon/text.png" width="18" height="18"></a> </td><td>
+<a href=p%3d6592%26upm_export%3dprint.html target="_blank"><img src="icon/print.png" width="18" ></a> </td></tr></table>
+</div>
+<div class="cats-content" id="cats-content">
+<ul>
+
+<li><a href="index31f9.html?p=7494">&#8220;Kapı&#8221; Metaforu Üzerine (10 Nisan)</a></li>
+<li><a href="index3f61.html?p=7490">Doç. Dr. M. Ertan Kardeş (23 Mar)</a></li>
+<li><a href="index503b.html?p=7481">Dr. Öğr. Ü. Arzu İbişi Temelli (17 Mar)</a></li>
+<li><a href="indexa7d8.html?p=7470">Prof. Dr. Ayhan Bıçak (14 Mart)</a></li>
+<li><a href="index20d9.html?p=6436">Ders Programı</a></li>
+<li><a href="index6069.html?p=7430">Prof. Dr. Şafak Ural&#8217;a Saygı Toplantısı</a></li>
+<li><a href="indexe1cb.html?p=7427">Abdessamed Taibi</a></li>
+<li><a href="indexfd07.html?p=7422">İSEDER Atölyeleri</a></li>
+<li><a href="index68d8.html?p=7414">VII. Mantık Çalıştayı Kitabı yayımlandı</a></li>
+<li><a href="index9d09.html?p=7392">Dar Kapıdaki Mesih</a></li>
+</ul>
+<script language="javascript">setPage()</script>
+</div>
+<div class="clr"></div>
+</div>
+
+	
+<div class="clr"></div>
+<div class="unifoot">
+<div class="adres">İstanbul Üniversitesi  Edebiyat Fakültesi
+<p>Ordu Cad. No. 196, 34459 Laleli / İstanbul</p>
+<p>Tel: 0 (212) 440 00 00</p>
+
+</div>
+
+
+<div class="clr"></div>
+</div>
+<div class="clr"></div>
+<div class="footer">
+<span class="left">Her hakkı İstanbul Üniversitesi'ne aittir. Copyright 2011.</span>
+<div class="right">
+<ul>
+<li><a href="http://edebiyat.istanbul.edu.tr/felsefe">Site Haritası</a></li>
+<li><a href="index3d1a.html?p=5957">İletişim Bilgileri</a></li>
+<li><a href="https://www.facebook.com/iufelsefe" target="_blank">Facebook</a></li>
+<li><a href="https://twitter.com/iufelsefe" target="_blank" >Twitter</a></li>
+</ul>
+</div>
+</div>
+<div class="clr"></div>
+<!-- ngg_resource_manager_marker --><script type='text/javascript' src='wp-includes/js/comment-reply.minef15.js?ver=4.8'></script>
+<script type='text/javascript' src='wp-content/plugins/lightbox-plus/js/jquery.colorbox.1.5.9-min7fb9.js?ver=1.5.9'></script>
+<script type='text/javascript' src='wp-includes/js/wp-embed.minef15.js?ver=4.8'></script>
+<!-- Lightbox Plus Colorbox v2.7.2/1.5.9 - 2013.01.24 - Message: 0-->
+<script type="text/javascript">
+jQuery(document).ready(function($){
+  $("a[rel*=lightbox]").colorbox({speed:350,initialWidth:"300",initialHeight:"100",opacity:0.8,loop:false,scrolling:false,arrowKey:false,top:false,right:false,bottom:false,left:false});
+});
+</script>
+</body>
+
+<!-- Mirrored from edebiyat.istanbul.edu.tr/felsefe/?p=6592 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 22 Mar 2018 12:52:20 GMT -->
+</html>
